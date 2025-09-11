@@ -1,0 +1,63 @@
+
+Status: PASSED!
+Check: 1
+Test: Program returns the expected results when given the input of **0**
+Reason: None
+Timestamp: 2025-09-11 16:24:08.651312
+
+Status: FAILED!
+Check: 2
+Test: Program returns the expected results when given the input of **12.0**
+Reason: Unable to find '[24.0, 75.39822368615503, 1809.5573684677208, 7238.229473870883]' in the program's output.
+Enter the sphere's radius: Diameter:  24.0
+Circumference:  75.36
+Surface area:  1808.64
+Volume:  7234.5599999999995
+.
+Error : AssertionError - Unable to find a number close enough to 75.39822368615503 (+/-0.01) in the program's output.
+Timestamp: 2025-09-11 16:24:08.677772
+
+Status: FAILED!
+Check: 2
+Test: 
+Reason: 
+Error : AssertionError - Failed
+Timestamp: 2025-09-11 16:24:08.677849
+
+Status: FAILED!
+Check: 3
+Test: Program returns the expected results when given the input of **6.0**
+Reason: Unable to find '[12.0, 37.69911184307752, 452.3893421169302, 904.7786842338604]' in the program's output.
+Enter the sphere's radius: Diameter:  12.0
+Circumference:  37.68
+Surface area:  452.16
+Volume:  904.3199999999999
+.
+Error : AssertionError - Unable to find a number close enough to 37.69911184307752 (+/-0.01) in the program's output.
+Timestamp: 2025-09-11 16:24:08.704756
+
+Status: FAILED!
+Check: 3
+Test: 
+Reason: 
+Error : AssertionError - Failed
+Timestamp: 2025-09-11 16:24:08.704845
+
+Status: FAILED!
+Check: 4
+Test: Program returns the expected results when given the input of **-6.0**
+Reason: Unable to find '[-12.0, -37.69911184307752, 452.3893421169302, -904.7786842338604]' in the program's output.
+Enter the sphere's radius: Diameter:  -12.0
+Circumference:  -37.68
+Surface area:  452.16
+Volume:  -904.3199999999999
+.
+Error : AssertionError - Unable to find a number close enough to -37.69911184307752 (+/-0.01) in the program's output.
+Timestamp: 2025-09-11 16:24:08.731796
+
+Status: FAILED!
+Check: 4
+Test: 
+Reason: 
+Error : AssertionError - Failed
+Timestamp: 2025-09-11 16:24:08.731877
