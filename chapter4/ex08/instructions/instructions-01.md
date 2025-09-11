@@ -1,0 +1,1 @@
+**Task #01:** `length()` function works as expected`

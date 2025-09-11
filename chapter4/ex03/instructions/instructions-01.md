@@ -1,0 +1,1 @@
+**Task #01:** `grow()` function properly increases the size of the `Array`

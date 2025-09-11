@@ -1,0 +1,22 @@
+Complete the classes for `ArraySet` and `LinkedSet`, so they use inheritance to
+maximum advantage. 
+
+>Be sure to reuse your solution from *Programming Exercise 6.3* as your starter file for the *arraysortedbag.py*, *linkedbag.py* and *abstractbag.py* files.
+
+In the `ArraySet` class of the *arrayset.py* file, complete the following:
+1. Import the `ArrayBag` class from the *arraybag.py* file
+2. Modify the `__init__` so that it contains the contents of sourceCollection from the `ArrayBag` class, if it's present.
+3. Modify the `add()` method so that it uses the `add()` method from `ArrayBag` if an item is not present.
+4. Remove any methods that are redundant from the `ArraySet` class.
+
+In the `LinkedSet` class of the *linkedset.py* file, complete the following:
+1. Import the `LinkedBag` class from the *linkedbag.py* file
+2. Modify the `__init__` so that it contains the contents of sourceCollection from the `LinkedBag` class, if it's present. 
+3. Modify the `add()` method so that it uses the `add()` method from `LinkedBag` if an item is not present.
+4. Remove any methods that are redundant from the `LinkedSet` class.
+
+> Be sure to retain in the `ArraySet` and `LinkedSet` class only those methods that cannot
+be moved to their parent class.
+
+
+To test your program run the `test()` method in the *testset.py* file.

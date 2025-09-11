@@ -1,0 +1,1 @@
+**Task #01:** Inherited the `__len__` method

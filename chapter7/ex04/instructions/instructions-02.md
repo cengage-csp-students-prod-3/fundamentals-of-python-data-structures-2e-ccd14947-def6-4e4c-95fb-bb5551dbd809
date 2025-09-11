@@ -1,0 +1,1 @@
+**Task #02:** Added `EXPO` to the `computeValue()` class

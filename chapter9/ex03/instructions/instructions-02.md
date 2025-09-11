@@ -1,0 +1,1 @@
+**Task #02:** Completed the implementation of `ArrayListIterator()`

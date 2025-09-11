@@ -1,0 +1,1 @@
+**Task #01:** ```LinkedQueue``` visits 247 choice points

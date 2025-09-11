@@ -1,0 +1,1 @@
+**Task #02:** `isBalanced()` returns the correct value

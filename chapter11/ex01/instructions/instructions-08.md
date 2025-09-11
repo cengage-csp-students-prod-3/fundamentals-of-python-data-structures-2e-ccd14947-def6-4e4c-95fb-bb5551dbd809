@@ -1,0 +1,1 @@
+**Task #08:** Completed the implementation of `getProbeCount()` in the *hashtable.py* file

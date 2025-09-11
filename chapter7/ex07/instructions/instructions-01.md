@@ -1,0 +1,1 @@
+**Task #01:** Exceptions are raised correctly

@@ -1,0 +1,1 @@
+**Task #02:** Recursion strategy was added to the `expo()` function

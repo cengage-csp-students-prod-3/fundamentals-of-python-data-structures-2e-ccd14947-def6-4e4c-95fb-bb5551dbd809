@@ -1,0 +1,1 @@
+**Task #03:** `InteriorNode` returns the correct value

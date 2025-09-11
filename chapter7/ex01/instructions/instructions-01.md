@@ -1,0 +1,1 @@
+**Task #01:** Defined the  `peek`, `clear`, `push`,  and `pop` functions in `ArrayStack`

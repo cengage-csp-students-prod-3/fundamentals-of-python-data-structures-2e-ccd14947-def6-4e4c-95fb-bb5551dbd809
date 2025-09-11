@@ -1,0 +1,1 @@
+**Task #02:** Prints exception followed by the portion of the expression

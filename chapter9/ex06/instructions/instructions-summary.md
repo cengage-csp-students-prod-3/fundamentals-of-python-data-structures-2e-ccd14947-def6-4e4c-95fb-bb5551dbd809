@@ -1,0 +1,17 @@
+Most word processors have a feature called word wrap, which automatically moves the user’s next word down a line when the right margin is reached.
+To explore how this feature works, write a program in *wordwrap.py* that allows the user to reformat the text in a file.
+
+In the *wordwrap.py* file complete the following:
+1. The user should input the line width in characters and input the names of the input and output files.
+2. The program should then input the words from the file into a list of sublists.
+3. Each sublist represents a line of text to be output to the file.
+4. As the words are input into each sublist, the program tracks the length of that line to ensure that it is less than or equal to the user’s line length.
+5. When all the words have been entered into the sublists, the program should traverse them to write their contents to the output file.
+
+To test your program run the `main` method in the *wordwrap.py* file.
+
+>When testing you will be asked to input values:
+1. Choose any input file from the available starter files
+2. Name your output file
+3. Enter a number greater or equal to 40 for the line width.
+

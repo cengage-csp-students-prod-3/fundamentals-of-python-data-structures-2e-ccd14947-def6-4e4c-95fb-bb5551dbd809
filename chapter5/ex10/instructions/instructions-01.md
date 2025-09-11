@@ -1,0 +1,1 @@
+**Task #01:** Changed `ArrayBag` with added **modCount**

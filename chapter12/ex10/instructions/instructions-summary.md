@@ -1,0 +1,49 @@
+The default `in`, `==`, and `+` operations are based on a collection’s iterator.
+In the case of graphs, the iterator visits the vertices, so these operations need further refinement.
+
+In the `LinkedDirectedGraph` class of the *graph.py* file, complete the following:
+1. Add the `__contains__` method
+	- Represents the `in` operator that returns `True` if its left operand is a label of a vertex in the graph, or `False` otherwise.
+2. Add the `__eq__` method
+	- Represents the `==` operator that returns `True` if the two graph operands are identical, or if they contain the same number of vertices and those vertices have the same labels and are connected by edges in the same manner (including the weights on the edges).
+3. Add the `__add__` method
+	- Represents the `+` operator that creates and builds a new graph with the contents of the two operands
+	- Each operand produces a separate component in the new graph.
+4. Add the `clone` method
+	- Returns an exact copy of the original graph.
+
+
+You can use *testdirected.py* to test your implementations or as a reference.
+
+Your program's output should look like the following:
+```
+The graph: 4 Vertices:  A B C D
+4 Edges:  >B:1 >C:3 >D:5 >B:2
+Expect True: True
+Expect False: False
+The clone: 4 Vertices:  A B C D
+4 Edges:  >B:1 >C:3 >D:5 >B:2
+First graph: 4 Vertices:  A B C D
+4 Edges:  >B:1 >C:3 >D:5 >B:2
+New graph: 3 Vertices:  E F G
+2 Edges:  >F:6 >E:8
+Add first graph and new graph with +:
+7 Vertices:  A B C D E F G
+6 Edges:  >B:1 >C:3 >D:5 >B:2 >F:6 >E:8
+Expect True: True
+Expect False: False
+Expect False: False
+Expect True: True
+Expect False: False
+Expect an error when running g + g:
+Traceback (most recent call last):
+  File "testdirected.py", line 46, in <module>
+    print(g + g)
+  File "/root/sandbox/graph.py", line 199, in __add__
+    newGraph.add(vertex.getLabel())
+  File "/root/sandbox/graph.py", line 278, in add
+    self.addVertex(label)
+  File "/root/sandbox/graph.py", line 288, in addVertex
+    raise AttributeError("Label " + str(label) + " already in graph.""")
+AttributeError: Label A already in graph.
+``` 

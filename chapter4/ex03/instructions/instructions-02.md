@@ -1,0 +1,1 @@
+**Task #02:** `shrink()` function properly decreases the size of the `Array`

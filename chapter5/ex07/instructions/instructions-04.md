@@ -1,0 +1,1 @@
+**Task #04:** Define `LinkedSet`'s `remove` method

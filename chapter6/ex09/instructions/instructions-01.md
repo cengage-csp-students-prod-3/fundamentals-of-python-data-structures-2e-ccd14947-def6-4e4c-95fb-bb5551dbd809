@@ -1,0 +1,1 @@
+**Task #01:** `remove()` method works as expected

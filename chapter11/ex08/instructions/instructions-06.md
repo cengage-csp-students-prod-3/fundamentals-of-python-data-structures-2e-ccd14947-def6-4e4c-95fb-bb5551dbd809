@@ -1,0 +1,1 @@
+**Task #06:** Completed the implementation of `add()`

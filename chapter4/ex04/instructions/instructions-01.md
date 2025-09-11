@@ -1,0 +1,1 @@
+**Task #01:** `insert()` method works as expected

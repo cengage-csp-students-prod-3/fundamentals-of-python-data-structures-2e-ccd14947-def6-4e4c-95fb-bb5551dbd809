@@ -1,0 +1,1 @@
+**Task #01:** Completed the `__eq__` method implementation

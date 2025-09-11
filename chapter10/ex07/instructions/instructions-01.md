@@ -1,0 +1,1 @@
+**Task #01:** `LeafNode's` methods defined

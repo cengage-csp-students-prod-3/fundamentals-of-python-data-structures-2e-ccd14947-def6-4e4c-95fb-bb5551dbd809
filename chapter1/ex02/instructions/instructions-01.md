@@ -1,0 +1,1 @@
+**Task #01:** Program correctly calculates the total weekly pay

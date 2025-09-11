@@ -1,0 +1,1 @@
+**Task #01:** `insert()` inserts an item into the singly linked structure

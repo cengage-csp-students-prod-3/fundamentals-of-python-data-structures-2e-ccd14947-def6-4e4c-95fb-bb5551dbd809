@@ -1,0 +1,1 @@
+**Task #02:** Exceptions are raised when preconditions are violated

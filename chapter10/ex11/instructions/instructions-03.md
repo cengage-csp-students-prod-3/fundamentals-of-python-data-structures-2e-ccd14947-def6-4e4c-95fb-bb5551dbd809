@@ -1,0 +1,1 @@
+**Task #03:** `HeapQueuePriority` successfully pops items from the queue

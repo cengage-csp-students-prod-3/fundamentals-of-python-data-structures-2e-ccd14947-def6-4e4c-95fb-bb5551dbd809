@@ -1,0 +1,1 @@
+**Task #02:** `predecessor()`returns the proper value

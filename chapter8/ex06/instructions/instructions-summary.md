@@ -1,0 +1,35 @@
+<!-- manual -->
+
+Modify the simulation of _Exercise 5_ so that it takes account of both factors:
+
+1. The length of a line of customers waiting to check out.
+2. The physical proximity of a cashier.
+
+You should assume that a customer initially arrives at the checkout line of a random cashier and then chooses a cashier who is no more than two lines away from this spot. This simulation should have at least four cashiers.
+
+In the `MarketModel` class of the _marketmodel.py_ file, complete the following:
+
+1. Return the cashier for the next customer, based on the shortest line of customers no more than two lines away.
+   - Pick a random index and create a sublist of the allowable cashiers
+   - Search the short list for the cashier with the shortest line
+
+To test your program run the `main()` method in the _marketapp.py_ file.
+
+Your program's output should look like the following:
+
+```
+Welcome to the Market Simulator!
+
+Enter the total running time: 30
+Enter the average processing time per customer: 3
+Enter the probability of a new arrival: 1
+Enter the number of cashiers: 4
+
+----------------------------------------
+CASHIER CUSTOMERS   AVERAGE     LEFT IN
+        PROCESSED   WAIT TIME   LINE
+   1        0          0.00        0
+   2        8          0.75        1
+   3       10          1.60        0
+   4       10          1.20        1
+```

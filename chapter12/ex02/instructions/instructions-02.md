@@ -1,0 +1,1 @@
+**Task #02:** Successfully added a graph through input from the keyboard

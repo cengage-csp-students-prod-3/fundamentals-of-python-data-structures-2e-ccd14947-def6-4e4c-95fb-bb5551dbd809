@@ -1,0 +1,1 @@
+**Task #03:** `TreeSortedSet` removes values from set

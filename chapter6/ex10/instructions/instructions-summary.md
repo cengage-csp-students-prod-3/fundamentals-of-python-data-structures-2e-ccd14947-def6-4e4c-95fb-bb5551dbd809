@@ -1,0 +1,13 @@
+The `remove()` method in the `LinkedBag` class has the redundant search described
+in *Programming Exercise 6.8* of this chapter.
+
+>Be sure to reuse your solution from *Programming Exercise 6.9* as your starter file for the *arraysortedbag.py*, *linkedbag.py*, *abstractbag.py*, *arrayset.py*, *linkedset.py*, *arraysortedset.py*, and *arraybag.py* files.  
+
+In the *linkedbag.py* file complete the following:
+1. Modify the following methods in the `LinkedBag` class so that redundancy no longer exists:
+	- `__init__`
+	- `__contains__`	
+	- `clear()`
+	- `remove()`
+	
+To test your program run the `test()` method in the *testset.py* file.

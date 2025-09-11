@@ -1,0 +1,1 @@
+**Task #03:** Inherited the `__str__` method

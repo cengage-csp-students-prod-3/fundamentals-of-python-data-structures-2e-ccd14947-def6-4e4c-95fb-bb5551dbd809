@@ -1,0 +1,1 @@
+**Task #01:** `size()` returns the correct logical size for an `Array`

@@ -1,0 +1,1 @@
+**Task #04:** `TreeSortedSet` can add values to set

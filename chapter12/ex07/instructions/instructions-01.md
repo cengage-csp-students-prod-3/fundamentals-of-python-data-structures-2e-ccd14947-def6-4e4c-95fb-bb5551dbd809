@@ -1,0 +1,1 @@
+**Task #01:** `makeLabelTable()` method works as expected

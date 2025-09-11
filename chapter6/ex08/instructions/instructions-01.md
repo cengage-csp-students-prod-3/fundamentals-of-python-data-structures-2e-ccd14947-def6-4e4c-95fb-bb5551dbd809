@@ -1,0 +1,1 @@
+**Task #01:** `__contains__` and `remove()` methods work as expected

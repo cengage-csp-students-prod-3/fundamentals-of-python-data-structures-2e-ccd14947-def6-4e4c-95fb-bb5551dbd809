@@ -1,0 +1,1 @@
+**Task #04:** `Exception` raised when multiplying incompatible dimensions

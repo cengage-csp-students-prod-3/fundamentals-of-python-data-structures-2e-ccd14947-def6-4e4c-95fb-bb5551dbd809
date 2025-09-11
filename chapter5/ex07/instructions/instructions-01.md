@@ -1,0 +1,1 @@
+**Task #01:** Defined `LinkedSet`'s `add` method

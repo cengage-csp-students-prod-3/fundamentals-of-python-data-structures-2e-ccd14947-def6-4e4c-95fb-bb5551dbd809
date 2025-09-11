@@ -1,0 +1,1 @@
+**Task #01:** `successor()` returns the proper value

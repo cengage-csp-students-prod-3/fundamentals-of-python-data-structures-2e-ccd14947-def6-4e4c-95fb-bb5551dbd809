@@ -1,0 +1,1 @@
+**Task #07:** Completed the implementation of `getActualIndex()` in the *hashtable.py* file

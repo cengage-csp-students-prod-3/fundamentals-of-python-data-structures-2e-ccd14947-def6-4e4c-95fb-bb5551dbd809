@@ -1,0 +1,1 @@
+**Task #02:** `pop()` method works as expected

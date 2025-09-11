@@ -1,0 +1,1 @@
+**Task #01:** Modify the `remove()` method in `LinkedBag` class

@@ -1,0 +1,1 @@
+**Task #02:** `FileView` allows user to navigate to last line of file

@@ -1,0 +1,1 @@
+**Task #02:** `==` operator works as expected

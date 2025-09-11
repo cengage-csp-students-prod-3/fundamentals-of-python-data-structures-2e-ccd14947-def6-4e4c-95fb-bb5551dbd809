@@ -1,0 +1,1 @@
+**Task #02:** `mean()` returns the correct values

@@ -1,0 +1,10 @@
+The modified `remove()` method of *Programming Exercise 6.8* no longer works correctly for a sorted
+bag. The reason for this is that the `__contains__` method in `ArraySortedBag` class
+does not update the new position variable in `ArrayBag`.
+
+>Be sure to reuse your solution from *Programming Exercise 6.8* as your starter file for the *arraysortedbag.py*, *linkedbag.py*, *abstractbag.py*, *arrayset.py*, *linkedset.py*, *arraysortedset.py*, and *arraybag.py* files. 
+
+In the `ArraySortedBag` class of the *arraysortedbag.py* file, complete the following:
+1. Modify the `__contains__` method, so that the `remove()` method works correctly for sorted bags.
+
+To test your program run the `test()` method in the *testset.py* file.

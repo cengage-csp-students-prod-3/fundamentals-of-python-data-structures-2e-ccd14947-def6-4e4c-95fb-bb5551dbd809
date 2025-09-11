@@ -1,0 +1,1 @@
+**Task #02:** Define `LinkedSet`'s `clone` method

@@ -1,0 +1,1 @@
+**Task #05:** Completed the implementation of `remove()`

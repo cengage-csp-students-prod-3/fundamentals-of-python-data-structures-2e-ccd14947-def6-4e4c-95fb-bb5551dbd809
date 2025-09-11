@@ -1,0 +1,1 @@
+**Task #03:** Define `LinkedSet`'s `clear` method

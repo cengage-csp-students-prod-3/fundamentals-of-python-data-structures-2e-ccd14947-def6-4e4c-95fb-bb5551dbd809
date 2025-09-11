@@ -1,0 +1,15 @@
+The `List` method `reverse()` reverses the elements in the list. 
+
+In the *reverse.py* file, complete the following: 
+1. Define a function named `reverse()` that reverses the elements in its list argument. Do not use the `List`
+  method `.reverse()`. 
+2. Try to make the function as efficient as possible. 
+3. State its computational complexity using big-O notation in the docString/headerDoc.
+
+To test your program run the `main()` method in the *reverse.py* file.
+
+Your program's output should look like the following:
+```
+[3, 2, 1, 0]
+[2, 1, 0]
+```

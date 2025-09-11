@@ -1,0 +1,1 @@
+**Task #02:** Inherited the`__add__` method.
