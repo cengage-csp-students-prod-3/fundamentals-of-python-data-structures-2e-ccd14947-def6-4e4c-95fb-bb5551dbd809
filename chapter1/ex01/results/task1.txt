@@ -3,61 +3,22 @@ Status: PASSED!
 Check: 1
 Test: Program returns the expected results when given the input of **0**
 Reason: None
-Timestamp: 2025-09-11 16:40:38.727231
+Timestamp: 2025-09-11 16:43:00.901872
 
-Status: FAILED!
+Status: PASSED!
 Check: 2
 Test: Program returns the expected results when given the input of **12.0**
-Reason: Unable to find '[24.0, 75.39822368615503, 1809.5573684677208, 7238.229473870883]' in the program's output.
-Enter the sphere's radius: Diameter:  24.0
-Circumference:  75.5016
-Surface area:  1812.0384000000001
-Volume:  7248.1536
-.
-Error : AssertionError - Unable to find a number close enough to 75.39822368615503 (+/-0.01) in the program's output.
-Timestamp: 2025-09-11 16:40:38.744575
+Reason: None
+Timestamp: 2025-09-11 16:43:00.918824
 
-Status: FAILED!
-Check: 2
-Test: 
-Reason: 
-Error : AssertionError - Failed
-Timestamp: 2025-09-11 16:40:38.744635
-
-Status: FAILED!
+Status: PASSED!
 Check: 3
 Test: Program returns the expected results when given the input of **6.0**
-Reason: Unable to find '[12.0, 37.69911184307752, 452.3893421169302, 904.7786842338604]' in the program's output.
-Enter the sphere's radius: Diameter:  12.0
-Circumference:  37.7508
-Surface area:  453.00960000000003
-Volume:  906.0192
-.
-Error : AssertionError - Unable to find a number close enough to 37.69911184307752 (+/-0.01) in the program's output.
-Timestamp: 2025-09-11 16:40:38.761607
+Reason: None
+Timestamp: 2025-09-11 16:43:00.935628
 
-Status: FAILED!
-Check: 3
-Test: 
-Reason: 
-Error : AssertionError - Failed
-Timestamp: 2025-09-11 16:40:38.761661
-
-Status: FAILED!
+Status: PASSED!
 Check: 4
 Test: Program returns the expected results when given the input of **-6.0**
-Reason: Unable to find '[-12.0, -37.69911184307752, 452.3893421169302, -904.7786842338604]' in the program's output.
-Enter the sphere's radius: Diameter:  -12.0
-Circumference:  -37.7508
-Surface area:  453.00960000000003
-Volume:  -906.0192
-.
-Error : AssertionError - Unable to find a number close enough to -37.69911184307752 (+/-0.01) in the program's output.
-Timestamp: 2025-09-11 16:40:38.778725
-
-Status: FAILED!
-Check: 4
-Test: 
-Reason: 
-Error : AssertionError - Failed
-Timestamp: 2025-09-11 16:40:38.778778
+Reason: None
+Timestamp: 2025-09-11 16:43:00.952382
