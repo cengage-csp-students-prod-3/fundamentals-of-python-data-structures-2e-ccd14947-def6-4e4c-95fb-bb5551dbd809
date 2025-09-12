@@ -1,23 +1,25 @@
-import random
+import math
 
 def main():
-    """Inputs the bounds of the range of numbers,
-    and lets the user guess the computer's number until
-    the guess is correct."""
-    low = int(input("Enter the smaller number: "))
-    high = int(input("Enter the larger number: "))
-    myNumber = random.randint(low, high)
-    count = 0
-    while True:
-        count += 1
-        userNumber = int(input("Enter your guess: "))
-        if userNumber < myNumber:
-            print("Too small")
-        elif userNumber > myNumber:
-            print("Too large")
-        else:
-            print("You've got it in", count, "tries!")
-            break
+    low =int(input("Enter the smaller number:"))
+    
+    high =int(input("Enter the larger number:"))
 
-if __name__ == "__main__":
-    main()
+    yourNumber = round(math.log(high - low + 1,2))
+    count=0
+    
+    print("Your number is", yourNumber)
+
+    user_response = input("Enter =, <, or >:")
+
+    count+=1
+
+    if user_response == ">":
+        print("Your number is", yourNumber)
+    elif user_response == "<":
+            print("Your number is", yourNumber)
+    elif user_response == "=":
+            print("Hooray, I got it in", count, "tries!")
+
+            if __name__ == "__main__":
+                main()
