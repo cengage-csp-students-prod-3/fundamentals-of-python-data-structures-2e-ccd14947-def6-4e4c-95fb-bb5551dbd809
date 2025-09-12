@@ -3,28 +3,33 @@ Status: FAILED!
 Check: 1
 Test: Program guesses 3 with a lower bound of 0 and upper bound of 10
 Reason: Unable to find '['5', '2', '3', "Hooray, I've got it in 3 tries!"]' in the program's output.
-.
+Enter the smaller number:Enter the larger number:Your number is 9
+Enter =, <, or >:Your number is 10
+Enter =, <, or >:.
 Error : AssertionError - Unable to find a number close enough to 5 (+/-0.00) in the program's output.
-Timestamp: 2025-09-12 03:37:39.618064
+Timestamp: 2025-09-12 21:10:48.824019
 
 Status: FAILED!
 Check: 1
 Test: 
 Reason: 
 Error : AssertionError - Failed
-Timestamp: 2025-09-12 03:37:39.618158
+Timestamp: 2025-09-12 21:10:48.824194
 
 Status: FAILED!
 Check: 2
 Test: Program detects that the user is cheating
 Reason: Unable to find '['5', '2', '3', "You're cheating!"]' in the program's output.
-.
+Enter the smaller number:Enter the larger number:Your number is 1
+Enter =, <, or >:Your number is 3
+Enter =, <, or >:Your number is 2
+Enter =, <, or >:.
 Error : AssertionError - Unable to find a number close enough to 5 (+/-0.00) in the program's output.
-Timestamp: 2025-09-12 03:37:39.644312
+Timestamp: 2025-09-12 21:10:48.980682
 
 Status: FAILED!
 Check: 2
 Test: 
 Reason: 
 Error : AssertionError - Failed
-Timestamp: 2025-09-12 03:37:39.644381
+Timestamp: 2025-09-12 21:10:48.980798
