@@ -20,12 +20,12 @@ def main():
         else: 
             user_response = input("Enter =, <, or >:") #User tells computer if its higher or lower.
 
-            if user_response == ">":
+            if user_response == "<":
                 high = yourNumber - 1 #Whatever computer guessed -1, because we're saying it's less than that number. Update the higher bound.
                 yourNumber = random.randint(low, high) #Should generate a higher number.
                 
                 print("Your number is", yourNumber)
-            elif user_response == "<":
+            elif user_response == ">":
                 low = yourNumber + 1 #Whatever computer guessed +1, because we're saying it's greater than that number. Update the lower bound.
                 yourNumber = random.randint(low, high) #Should generate a lower number
                 
