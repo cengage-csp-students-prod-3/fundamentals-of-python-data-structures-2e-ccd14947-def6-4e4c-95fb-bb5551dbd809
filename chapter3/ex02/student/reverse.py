@@ -10,9 +10,9 @@ def reverse(lyst):
     # Use indexes to the first and last element
     # and move them toward each other.
 
-def reverse():
+def reverse O(n)
+    lyst = list(revrse)
     
-
 def swap(lyst, x, y):
     """Exchanges the elements at positions x and y."""
     
@@ -28,6 +28,4 @@ def main():
 if __name__ == "__main__":
     main()
 
-while
-    poop
     
