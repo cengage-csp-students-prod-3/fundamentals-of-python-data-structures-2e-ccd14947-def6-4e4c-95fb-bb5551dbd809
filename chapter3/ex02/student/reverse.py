@@ -11,7 +11,7 @@ def reverse(lyst):
     # and move them toward each other.
 
 def reverse():
-    dktfyghijok';l';
+    
 
 def swap(lyst, x, y):
     """Exchanges the elements at positions x and y."""
@@ -27,4 +27,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+while
+    poop
     
