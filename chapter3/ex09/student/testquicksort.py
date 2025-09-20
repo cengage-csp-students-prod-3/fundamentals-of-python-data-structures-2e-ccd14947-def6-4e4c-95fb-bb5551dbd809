@@ -21,7 +21,7 @@ def insertionSort(lyst, left, right):
 
 def quicksort(lyst):
     quicksortHelper(lyst, 0, len(lyst) - 1)
-    insertionSort
+    
 
 def quicksortHelper(lyst, left, right):
     if left < right:
@@ -58,7 +58,7 @@ def swap(lyst, i, j):
 import random
 
 
-def main(size = 20, sort = quicksort):
+def main(size = 500, sort = quicksort):
     lyst = []
     for count in range(size):
         lyst.append(random.randint(1, size + 1))
