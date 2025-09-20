@@ -24,10 +24,13 @@ def quicksort(lyst):
     
 
 def quicksortHelper(lyst, left, right):
-    if left < right:
-        pivotLocation = partition(lyst, left, right)
-        quicksortHelper(lyst, left, pivotLocation - 1)
-        quicksortHelper(lyst, pivotLocation + 1, right)
+    if lyst > 50:
+        insertionSort(lyst, left, right)
+    else:
+        if left < right:
+            pivotLocation = partition(lyst, left, right)
+            quicksortHelper(lyst, left, pivotLocation - 1)
+            quicksortHelper(lyst, pivotLocation + 1, right)
 
 def partition(lyst, left, right):
     # Find the pivot and exchange it with the last item
