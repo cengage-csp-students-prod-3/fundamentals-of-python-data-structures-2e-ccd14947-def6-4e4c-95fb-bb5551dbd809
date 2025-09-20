@@ -1,0 +1,14 @@
+
+Status: FAILED!
+Check: 1
+Test: Used `insertionSort()`
+Reason: Unable to find '\sinsertionSort\(lyst, left, right\)\s' in the program.
+Error : str - AssertionError
+Timestamp: 2025-09-20 23:42:24.645455
+
+Status: FAILED!
+Check: 1
+Test: 
+Reason: 
+Error : AssertionError - Failed
+Timestamp: 2025-09-20 23:42:24.645514
