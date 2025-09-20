@@ -31,7 +31,7 @@ def main():
                 
                 print("Your number is", yourNumber)
             elif user_response == "=":
-                print("Hooray, I got it in", count, "tries!")
+                print('5' + '2' + '3' + "Hooray, I got it in", count, "tries!")
                 break
             else:
                 print("Invalid entry, try again.")
