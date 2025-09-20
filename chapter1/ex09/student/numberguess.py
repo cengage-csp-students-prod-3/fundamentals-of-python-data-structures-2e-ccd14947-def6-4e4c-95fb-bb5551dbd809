@@ -7,7 +7,8 @@ def main():
     guessCount = round(math.log(high - low + 1, 2))
     count=0
     
-    yourNumber = random.randint(low, high) #this is the computer's guess
+    #yourNumber = random.randint(low, high) #this is the computer's guess
+    yourNumber = (low + high) // 2
 
     print("Your number is", yourNumber)
 
@@ -22,13 +23,14 @@ def main():
 
             if user_response == "<":
                 high = yourNumber - 1 #Whatever computer guessed -1, because we're saying it's less than that number. Update the higher bound.
-                yourNumber = random.randint(low, high) #Should generate a higher number.
+                #yourNumber = random.randint(low, high) #Should generate a higher number.
+                yourNumber = (low + high) // 2
                 
                 print("Your number is", yourNumber)
             elif user_response == ">":
                 low = yourNumber + 1 #Whatever computer guessed +1, because we're saying it's greater than that number. Update the lower bound.
-                yourNumber = random.randint(low, high) #Should generate a lower number
-                
+                #yourNumber = random.randint(low, high) #Should generate a lower number
+                yourNumber = (low + high) // 2
                 print("Your number is ", yourNumber)
             elif user_response == "=":
                 print("Hooray, I've got it in", count, "tries!")
