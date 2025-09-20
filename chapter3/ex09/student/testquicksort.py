@@ -6,10 +6,22 @@ Tests the quicksort algorithm
 """
 
 def insertionSort(lyst, left, right):
-
+    i=1
+    while i < len(lyst) :
+        itemToInsert = lyst[i]
+        j = i - 1
+        while j >= 0:
+            if itemToInsert < lyst[j]:
+                lyst[j + i] = lyst[j]
+                j -= 1
+            else:
+                break
+        lyst[j + 1] = itemToInsert
+        i += 1 
 
 def quicksort(lyst):
     quicksortHelper(lyst, 0, len(lyst) - 1)
+    insertionSort
 
 def quicksortHelper(lyst, left, right):
     if left < right:
