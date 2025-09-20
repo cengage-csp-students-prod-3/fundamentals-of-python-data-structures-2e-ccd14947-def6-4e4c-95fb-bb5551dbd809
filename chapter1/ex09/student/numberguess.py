@@ -1,6 +1,6 @@
 import math
 import random
-
+#
 def main():
     low =int(input("Enter the smaller number:")) #User enters the lower bound as a clue. Only needs to happen once.
     high =int(input("Enter the larger number:")) #User enters the upper bound as a clue. Only needs to happen once.
