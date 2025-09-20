@@ -29,9 +29,9 @@ def main():
                 low = yourNumber + 1 #Whatever computer guessed +1, because we're saying it's greater than that number. Update the lower bound.
                 yourNumber = random.randint(low, high) #Should generate a lower number
                 
-                print("Your number is", yourNumber)
+                print("Your number is ", yourNumber)
             elif user_response == "=":
-                print('5' + '2' + '3' + "Hooray, I got it in", count, "tries!")
+                print("Hooray, I got it in", count, "tries!")
                 break
             else:
                 print("Invalid entry, try again.")
