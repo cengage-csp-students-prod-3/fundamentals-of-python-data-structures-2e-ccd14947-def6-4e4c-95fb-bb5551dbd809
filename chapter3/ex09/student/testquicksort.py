@@ -24,7 +24,7 @@ def quicksort(lyst):
     
 
 def quicksortHelper(lyst, left, right):
-    if lyst > 50:
+    if len(lyst) > 50:
         insertionSort(lyst, left, right)
     else:
         if left < right:
