@@ -45,7 +45,6 @@ class Array(object):
     def __getitem__(self, index):
         """Subscript operator for access at index."""
         if 0 <= index < size(self):
-
             return self.items[index]
 
         else:
@@ -54,7 +53,6 @@ class Array(object):
     def __setitem__(self, index, newItem):
         """Subscript operator for replacement at index."""
         if 0 <= index < size(self):
-
             return self.items[index]
 
         else:
