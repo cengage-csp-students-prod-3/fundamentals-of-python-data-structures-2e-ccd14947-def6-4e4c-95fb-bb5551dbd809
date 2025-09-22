@@ -3,16 +3,16 @@ Status: PASSED!
 Check: 1
 Test: `size()` returns the logical size of an `Array`
 Reason: None
-Timestamp: 2025-09-22 21:38:57.722228
+Timestamp: 2025-09-22 21:39:40.366277
 
 Status: PASSED!
 Check: 2
 Test: Difference between logical size and physical size
 Reason: None
-Timestamp: 2025-09-22 21:38:57.722341
+Timestamp: 2025-09-22 21:39:40.366387
 
 Status: PASSED!
 Check: 3
 Test: Checking length of array
 Reason: None
-Timestamp: 2025-09-22 21:38:57.722408
+Timestamp: 2025-09-22 21:39:40.366475
