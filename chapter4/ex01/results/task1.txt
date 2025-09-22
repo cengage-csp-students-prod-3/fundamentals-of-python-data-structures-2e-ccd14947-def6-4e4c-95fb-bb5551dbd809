@@ -1,0 +1,20 @@
+
+Status: FAILED!
+Check: 1
+Test: 
+Reason: 
+Error : NameError - name 'logicalSize' is not defined
+Timestamp: 2025-09-22 20:55:28.620618
+
+Status: FAILED!
+Check: 2
+Test: 
+Reason: 
+Error : NameError - name 'logicalSize' is not defined
+Timestamp: 2025-09-22 20:55:28.620726
+
+Status: PASSED!
+Check: 3
+Test: Checking length of array
+Reason: None
+Timestamp: 2025-09-22 20:55:28.620798
