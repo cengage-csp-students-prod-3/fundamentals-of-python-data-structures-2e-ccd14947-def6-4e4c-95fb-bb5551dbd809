@@ -33,8 +33,9 @@ class Array(object):
         for count in range(capacity):
             self.items.append(fillValue)
     
-    def insert(self):
+    def a.insert(self):
         
+        return a.insert(self.items)
         
 
     def __len__(self):
