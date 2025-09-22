@@ -22,11 +22,6 @@ class Array(object):
 	
 	# Reuse your solution from Programming Exercise 4.3 as your starter file
 
-    def insert()
-        
-
-    def pop():
-
     def __init__(self, capacity, fillValue = None):
         """Capacity is the static size of the array.
         fillValue is placed at each position."""
@@ -37,6 +32,9 @@ class Array(object):
         self.fillValue = fillValue
         for count in range(capacity):
             self.items.append(fillValue)
+    
+    def insert(self)
+        
 
     def __len__(self):
         """-> The capacity of the array."""
