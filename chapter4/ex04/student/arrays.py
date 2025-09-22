@@ -22,7 +22,7 @@ class Array(object):
 	
 	# Reuse your solution from Programming Exercise 4.3 as your starter file
 
-    def insert():
+    def insert()
         
 
     def pop():
