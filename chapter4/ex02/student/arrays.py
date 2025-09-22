@@ -53,6 +53,12 @@ class Array(object):
     
     def __setitem__(self, index, newItem):
         """Subscript operator for replacement at index."""
+        if 0 <= index < size(self):
+
+            return self.items[index]
+
+        else:
+            raise IndexError
         self.items[index] = newItem
 
 
