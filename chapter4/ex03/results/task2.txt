@@ -1,21 +1,19 @@
 
-Status: FAILED!
+Status: PASSED!
 Check: 1
-Test: 
-Reason: 
-Error : TypeError - 'float' object cannot be interpreted as an integer
-Timestamp: 2025-09-26 18:19:13.733574
+Test: `shrink()` modifies the array properly
+Reason: None
+Timestamp: 2025-09-26 18:29:22.405700
 
-Status: FAILED!
+Status: PASSED!
 Check: 2
-Test: 
-Reason: 
-Error : TypeError - 'float' object cannot be interpreted as an integer
-Timestamp: 2025-09-26 18:19:13.733702
+Test: `shrink()` modifies the array but remains above the initial physical size of the `Array`
+Reason: None
+Timestamp: 2025-09-26 18:29:22.405869
 
 Status: FAILED!
 Check: 3
 Test: 
 Reason: 
-Error : TypeError - 'float' object cannot be interpreted as an integer
-Timestamp: 2025-09-26 18:19:13.733783
+Error : AssertionError - 2 != 10
+Timestamp: 2025-09-26 18:29:22.405976
