@@ -51,7 +51,7 @@ class Array(object):
         self.items.insert(position, item)
     
     def pop(self, position, item):
-        self.items.pop(position, item)
+        self.items.pop(position)
 
 def main():
     """Test code for modified Array class."""
