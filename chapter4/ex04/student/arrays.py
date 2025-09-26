@@ -22,8 +22,6 @@ class Array(object):
 	
 	# Reuse your solution from Programming Exercise 4.3 as your starter file
 
-    
-
     def __init__(self, capacity, fillValue = None):
         """Capacity is the static size of the array.
         fillValue is placed at each position."""
@@ -46,18 +44,12 @@ class Array(object):
     def __iter__(self):
         """Supports traversal with a for loop."""
         return iter(self.items)
-    
-    def insert(self, position, item):
-        self.items.insert(position, item)
-    
-    def pop(self, position, item):
-        self.items.pop(position)
 
 def main():
     """Test code for modified Array class."""
     a = Array(5)
     print ("Physical size:", len(a))
-    print ("Logical size:", a.logicalSize)
+    print ("Logical size:", a.size())
     print ("Items:", a)
     for item in range(4):
         a.insert(0, item)
@@ -66,10 +58,10 @@ def main():
     print ("Items:", a)
     a.insert(10, 10)
     print ("Items:", a)
-    print(a.items.pop(3))
+    print(a.pop(3))
     print ("Items:", a)
     for count in range(5):
-        print(a.items.pop(0), end = " ")
+        print(a.pop(0), end = " ")
     print ()
 
 if __name__ == "__main__":
