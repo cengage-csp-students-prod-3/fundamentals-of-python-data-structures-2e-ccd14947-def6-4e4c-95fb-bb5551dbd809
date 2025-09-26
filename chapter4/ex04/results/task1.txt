@@ -3,5 +3,5 @@ Status: FAILED!
 Check: 1
 Test: 
 Reason: 
-Error : AttributeError - 'Array' object has no attribute 'insert'
-Timestamp: 2025-09-22 19:25:56.106408
+Error : TypeError - 'Array' object is not subscriptable
+Timestamp: 2025-09-26 19:59:09.065661
