@@ -34,6 +34,9 @@ class Array(object):
         self.fillValue = fillValue
         for count in range(capacity):
             self.items.append(fillValue)
+    def insert(self):
+    
+    def pop(self):
 
     def __len__(self):
         """-> The capacity of the array."""
