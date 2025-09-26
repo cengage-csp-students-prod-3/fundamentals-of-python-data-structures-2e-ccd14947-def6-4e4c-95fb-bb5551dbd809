@@ -1,0 +1,21 @@
+
+Status: FAILED!
+Check: 1
+Test: 
+Reason: 
+Error : TypeError - 'float' object cannot be interpreted as an integer
+Timestamp: 2025-09-26 18:19:13.733574
+
+Status: FAILED!
+Check: 2
+Test: 
+Reason: 
+Error : TypeError - 'float' object cannot be interpreted as an integer
+Timestamp: 2025-09-26 18:19:13.733702
+
+Status: FAILED!
+Check: 3
+Test: 
+Reason: 
+Error : TypeError - 'float' object cannot be interpreted as an integer
+Timestamp: 2025-09-26 18:19:13.733783
