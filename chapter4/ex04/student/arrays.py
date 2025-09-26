@@ -34,9 +34,6 @@ class Array(object):
         self.fillValue = fillValue
         for count in range(capacity):
             self.items.append(fillValue)
-    def insert(self):
-    
-    def pop(self):
 
     def __len__(self):
         """-> The capacity of the array."""
@@ -49,12 +46,18 @@ class Array(object):
     def __iter__(self):
         """Supports traversal with a for loop."""
         return iter(self.items)
+    
+    def insert(self, position, item):
+        self.items.insert(position, item)
+    
+    def pop(self, position, item):
+        self.items.pop(position, item)
 
 def main():
     """Test code for modified Array class."""
     a = Array(5)
     print ("Physical size:", len(a))
-    print ("Logical size:", a.size())
+    print ("Logical size:", a.logicalSize)
     print ("Items:", a)
     for item in range(4):
         a.insert(0, item)
@@ -63,10 +66,10 @@ def main():
     print ("Items:", a)
     a.insert(10, 10)
     print ("Items:", a)
-    print(a.pop(3))
+    print(a.items.pop(3))
     print ("Items:", a)
     for count in range(5):
-        print(a.pop(0), end = " ")
+        print(a.items.pop(0), end = " ")
     print ()
 
 if __name__ == "__main__":
