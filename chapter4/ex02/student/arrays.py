@@ -44,33 +44,28 @@ class Array(object):
 
     def __getitem__(self, index):
         """Subscript operator for access at index."""
+        if 0 <= index < size(self):
+            return self.items[index]
+
+        else:
+            raise IndexError
     
     def __setitem__(self, index, newItem):
         """Subscript operator for replacement at index."""
+        if 0 <= index < size(self):
+            return self.items[index]
+
+        else:
+            raise IndexError
         self.items[index] = newItem
-    
-    def grow(self):
-        temp = Array(len(self) * 2) 
-        for i in range(len(temp)):
-            temp [i] = None
-        self.items = temp.items
-        #print(self)
+
+
 def main():
     """Test code for modified Array class."""
-    a = Array(5)
+    a = Array(10)
     print("Physical size:", len(a))
     print("Logical size:", a.size())
     print("Items:", a)
-    a.grow()
-    print("Items:", a)
-    a.grow()
-    print("Items:", a)
-    # a.shrink()
-    # print("Items:", a)
-    # a.shrink()
-    # print("Items:", a)
-    # a.shrink()
-    # print("Items:", a)
 
 if __name__ == "__main__":
     main()

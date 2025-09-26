@@ -56,7 +56,7 @@ class Array(object):
         self.items = temp.items
     
     def shrink(self):
-        temp = Array(len(self) / 2) 
+        temp = Array(len(self) // 2)
         for i in range(len(temp)):
             temp [i] = None
         self.items = temp.items
