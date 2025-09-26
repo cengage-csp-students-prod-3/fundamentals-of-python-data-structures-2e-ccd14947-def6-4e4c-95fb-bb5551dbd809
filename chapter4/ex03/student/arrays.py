@@ -1,9 +1,10 @@
 """
 File: arrays.py
-Project 4.3
+Project 4.1
 
-Adds methods grow and shrink to increase or decrease the capacity
-of the array if necessary.
+
+Adds a logical size attribute and a size method.
+
 
 An Array is a restricted list whose clients can use
 only [], len, iter, and str.
@@ -13,25 +14,21 @@ To instantiate, use
 <variable> = array(<capacity>, <optional fill value>)
 
 The fill value is None by default.
-
-Reuse your solution from Programming Exercise 4.2 as your starter file
 """
 
 class Array(object):
     """Represents an array."""
-	
-	# Reuse your solution from Programming Exercise 4.2 as your starter file
 
     def __init__(self, capacity, fillValue = None):
         """Capacity is the static size of the array.
         fillValue is placed at each position."""
-        self.items = list()
         self.logicalSize = 0
-        # Track the capacity and fill value for adjustments later
-        self.capacity = capacity
-        self.fillValue = fillValue
+        self.items = list()
         for count in range(capacity):
             self.items.append(fillValue)
+
+    def size(self):
+        return self.logicalSize
 
     def __len__(self):
         """-> The capacity of the array."""
@@ -44,6 +41,16 @@ class Array(object):
     def __iter__(self):
         """Supports traversal with a for loop."""
         return iter(self.items)
+
+    def __getitem__(self, index):
+        """Subscript operator for access at index."""
+    
+    def __setitem__(self, index, newItem):
+        """Subscript operator for replacement at index."""
+        self.items[index] = newItem
+    
+    def grow(self):
+        temp = Array(len(self) * 2) 
 
 def main():
     """Test code for modified Array class."""
