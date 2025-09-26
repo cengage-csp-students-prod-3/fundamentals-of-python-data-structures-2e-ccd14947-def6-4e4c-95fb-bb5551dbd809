@@ -12,7 +12,7 @@ To instantiate, use
 
 <variable> = Array(<capacity>, <optional fill value>)
 
-The fill value is None by default.
+The fill value is None by default..
 """
 
 class Array(object):
