@@ -1,0 +1,6 @@
+
+Status: PASSED!
+Check: 1
+Test: `grow()` modifies the array properly
+Reason: None
+Timestamp: 2025-09-26 18:16:46.969180
