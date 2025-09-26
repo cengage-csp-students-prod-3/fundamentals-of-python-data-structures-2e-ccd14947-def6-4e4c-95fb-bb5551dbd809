@@ -51,7 +51,10 @@ class Array(object):
     
     def grow(self):
         temp = Array(len(self) * 2) 
-
+        for i in range(len(temp)):
+            temp [i] = None
+        self.items = temp.items
+        #print(self)
 def main():
     """Test code for modified Array class."""
     a = Array(5)
@@ -62,12 +65,12 @@ def main():
     print("Items:", a)
     a.grow()
     print("Items:", a)
-    a.shrink()
-    print("Items:", a)
-    a.shrink()
-    print("Items:", a)
-    a.shrink()
-    print("Items:", a)
+    # a.shrink()
+    # print("Items:", a)
+    # a.shrink()
+    # print("Items:", a)
+    # a.shrink()
+    # print("Items:", a)
 
 if __name__ == "__main__":
     main()
