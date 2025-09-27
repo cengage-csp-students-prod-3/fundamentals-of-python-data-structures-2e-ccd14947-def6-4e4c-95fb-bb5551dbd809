@@ -18,7 +18,7 @@ The fill value is None by default.
 class Array(object):
     """Represents an array.""" 
     def __eq__(self, other):
-        if type(other) == Array and len(other) == len(self): 
+        if type(other) == Array and other.logicalSize == self.logicalSize: 
          for i in range(len(self)):
              if self[i] != other[i]:
                 return(False)
