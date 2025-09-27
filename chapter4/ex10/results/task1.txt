@@ -1,0 +1,18 @@
+
+Status: PASSED!
+Check: 1
+Test: `pop()` removes the item at the correct position
+Reason: None
+Timestamp: 2025-09-27 21:51:22.827242
+
+Status: PASSED!
+Check: 2
+Test: `pop()` raises an `IndexError` when provided index is out of bounds
+Reason: None
+Timestamp: 2025-09-27 21:51:22.827433
+
+Status: PASSED!
+Check: 3
+Test: expected the precondition to raise an IndexError
+Reason: None
+Timestamp: 2025-09-27 21:51:22.827527
