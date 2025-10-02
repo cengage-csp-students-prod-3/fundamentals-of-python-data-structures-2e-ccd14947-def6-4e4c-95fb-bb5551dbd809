@@ -78,9 +78,18 @@ class ArrayBag(object):
 
     def add(self, item):
         """Adds item to self."""
-        self.items[len(self)]=item
-        self.size+=1
-        # Check array memory here and increase it if necessary.
-        
-        
+        """Adds item to self, growing array if needed."""
+    # Check if array is full
+        if len(self) == len(self.items):
+            # Grow array (typically double the size)
+            temp = Array(2 * len(self.items))
+            # Copy old items into new array
+            for i in range(len(self)):
+                temp[i] = self.items[i]
+            self.items = temp
+            self.items[len(self)]=item
+            self.size+=1
+            # Check array memory here and increase it if necessary.
+            
+            
         
