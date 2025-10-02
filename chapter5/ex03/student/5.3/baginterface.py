@@ -3,43 +3,57 @@ File: baginterface.py
 Author: Ken Lambert
 """
 
-"""
-An Array is a restricted list whose clients can use
-only [], len, iter, and str.
+class BagInterface(object):
+    """Interface for all bag types."""
 
-To instantiate, use
+    # Constructor
+    def __init__(self, sourceCollection = None):
+        """Sets the initial state of self, which includes the
+        contents of sourceCollection, if it's present."""
+        pass
 
-<variable> = array(<capacity>, <optional fill value>)
-
-The fill value is None by default.
-"""
-
-class Array(object):
-    """Represents an array."""
-
-    def __init__(self, capacity, fillValue = None):
-        """Capacity is the static size of the array.
-        fillValue is placed at each position."""
-        self._items = list()
-        for count in range(capacity):
-            self._items.append(fillValue)
-
+    # Accessor methods
+    def isEmpty(self):
+        """Returns True if len(self) == 0, or False otherwise."""
+        return True
+    
     def __len__(self):
-        """-> The capacity of the array."""
-        return len(self._items)
+        """-Returns the number of items in self."""
+        return 0
 
     def __str__(self):
-        """-> The string representation of the array."""
-        return str(self._items)
+        """Returns the string representation of self."""
+        return ""
 
     def __iter__(self):
-        """Supports iteration over a view of an array."""
-        return iter(self._items)
+        """Supports iteration over a view of self."""
+        return None
 
-    def __getitem__(self, index):
-        """Subscript operator for access at index."""
-        return self._items[index]
+    def __add__(self, other):
+        """Returns a new bag containing the contents
+        of self and other."""
+        return None
 
-    def __setitem__(self, index, newItem):
-        """Subscript operator for replacement at index."""
-        self._items[index] = newItem
+    def __eq__(self, other):
+        """Returns True if self equals other,
+        or False otherwise."""
+        return False
+
+    def count(self, item):
+        """Returns the number of instances of item in self."""
+        return 0
+
+    # Mutator methods
+    def clear(self):
+        """Makes self become empty."""
+        pass
+
+    def add(self, item):
+        """Adds item to self."""
+        pass
+
+    def remove(self, item):
+        """Precondition: item is in self.
+        Raises: KeyError if item in not in self.
+        Postcondition: item is removed from self."""
+        pass

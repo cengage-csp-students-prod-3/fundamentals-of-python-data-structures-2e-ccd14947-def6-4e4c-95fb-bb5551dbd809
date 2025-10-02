@@ -10,32 +10,28 @@ from linkedbag import LinkedBag
 def test(bagType):
     """Expects a bag type as an argument and runs some tests
     on objects of that type."""
-    lyst = [2013, 61, 1973]
+    print("Testing", bagType)
+    lyst = list(range(1, 11))
     print("The list of items added is:", lyst)
-    b1 = bagType(lyst)
-    print("Expect 3:", len(b1))
-    print("Expect the bag's string:", b1)
-    print("Expect True:", 2013 in b1)
-    print("Expect False:", 2012 in b1)
-    print("Expect the items on separate lines:")
-    for item in b1:
-        print(item)
-    b1.clear()
-    print("Expect {}:", b1)
-    b1.add(25)
-    b1.remove(25)
-    print("Expect {}:", b1)
-    b1 = bagType(lyst)
-    b2 = bagType(b1)
-    print("Expect True:", b1 == b2)
-    print("Expect False:", b1 is b2)
-    print("Expect two of each item:", b1 + b2)
-    for item in lyst:
-        b1.remove(item)
-    print("Expect {}:", b1)
-    print("Expect crash with KeyError:")
-    b2.remove(99)
+    b = bagType(lyst)
+    print("Expect the bag's string:", b)
+    print("Add 5 more items to test increasing the array size:")
+    for i in range(11, 16):
+        b.add(i)
+    print("Expect the bag's string:", b)
 
-#test(ArrayBag)
-test(LinkedBag)
+def testClone(bagType):
+    """Tests the resizing of an array-based bag,
+    when space is wasted."""
+    print("Testing", bagType)
+    bag1 = bagType([2,3,4])
+    bag2 = bag1.clone()
+    print("Creating bag1 with 2, 3, and 4.")
+    print("Cloning bag1 to bag2.")
+    print("Expect {2, 3, 4} and {2, 3, 4}.")
+    print(bag1, bag2)
+    print("Expect True for ==:", bag1 == bag2)
+    print("Expect False for is:", bag1 is bag2)
 
+testClone(ArrayBag)
+testClone(LinkedBag)
