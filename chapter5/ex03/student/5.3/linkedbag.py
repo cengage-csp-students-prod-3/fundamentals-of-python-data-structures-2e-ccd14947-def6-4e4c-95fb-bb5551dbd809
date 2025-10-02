@@ -1,5 +1,4 @@
 """
-Project 5.5
 File: linkedbag.py
 Author: Ken Lambert
 """
@@ -13,8 +12,8 @@ class LinkedBag(object):
     def __init__(self, sourceCollection = None):
         """Sets the initial state of self, which includes the
         contents of sourceCollection, if it's present."""
-        self.items = None
-        self.size = 0
+        self._items = None
+        self._size = 0
         if sourceCollection:
             for item in sourceCollection:
                 self.add(item)
@@ -26,7 +25,7 @@ class LinkedBag(object):
     
     def __len__(self):
         """-Returns the number of items in self."""
-        return self.size
+        return self._size
 
     def __str__(self):
         """Returns the string representation of self."""
@@ -34,7 +33,7 @@ class LinkedBag(object):
 
     def __iter__(self):
         """Supports iteration over a view of self."""
-        cursor = self.items
+        cursor = self._items
         while not cursor is None:
             yield cursor.data
             cursor = cursor.next
@@ -46,10 +45,6 @@ class LinkedBag(object):
         for item in other:
             result.add(item)
         return result
-
-    def clone(self):
-        """Returns a copy of self."""
-        
 
     def __eq__(self, other):
         """Returns True if self equals other,
@@ -66,13 +61,13 @@ class LinkedBag(object):
     # Mutator methods
     def clear(self):
         """Makes self become empty."""
-        self.size = 0
-        self.items = None
+        self._size = 0
+        self._items = None
 
     def add(self, item):
         """Adds item to self."""
-        self.items = Node(item, self.items)
-        self.size += 1
+        self._items = Node(item, self._items)
+        self._size += 1
 
     def remove(self, item):
         """Precondition: item is in self.
@@ -84,7 +79,7 @@ class LinkedBag(object):
         # Search for the node containing the target item
         # probe will point to the target node, and trailer
         # will point to the one before it, if it exists
-        probe = self.items
+        probe = self._items
         trailer = None
         for targetItem in self:
             if targetItem == item:
@@ -93,11 +88,11 @@ class LinkedBag(object):
             probe = probe.next
         # Unhook the node to be deleted, either the first one or one
         # thereafter
-        if probe == self.items:
-            self.items = self.items.next
+        if probe == self._items:
+            self._items = self._items.next
         else:
             trailer.next = probe.next
         # Decrement logical size
-        self.size -= 1
+        self._size -= 1
         
         
