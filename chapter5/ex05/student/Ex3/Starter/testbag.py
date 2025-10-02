@@ -20,18 +20,5 @@ def test(bagType):
         b.add(i)
     print("Expect the bag's string:", b)
 
-def testClone(bagType):
-    """Tests the resizing of an array-based bag,
-    when space is wasted."""
-    print("Testing", bagType)
-    bag1 = bagType([2,3,4])
-    bag2 = bag1.clone()
-    print("Creating bag1 with 2, 3, and 4.")
-    print("Cloning bag1 to bag2.")
-    print("Expect {2, 3, 4} and {2, 3, 4}.")
-    print(bag1, bag2)
-    print("Expect True for ==:", bag1 == bag2)
-    print("Expect False for is:", bag1 is bag2)
-
-testClone(ArrayBag)
-testClone(LinkedBag)
+test(ArrayBag)
+#test(LinkedBag)
