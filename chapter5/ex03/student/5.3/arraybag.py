@@ -42,13 +42,11 @@ class ArrayBag(object):
             yield self.items[cursor]
             cursor += 1
 
-    def __add__(self, other):
+    def __add__(self, item):
         """Returns a new bag containing the contents
         of self and other."""
-        result = ArrayBag(self)
-        for item in other:
-            result.add(item)
-        return result
+        self.items[len(self)] = item
+        self.size +=1
 
     def clone(self):
         """Returns a copy of self."""
