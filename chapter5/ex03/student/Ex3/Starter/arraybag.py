@@ -49,7 +49,6 @@ class ArrayBag(object):
         for item in other:
             result.add(item)
         return result
-    
 
     def __eq__(self, other):
         """Returns True if self equals other,
