@@ -77,6 +77,7 @@ class ArrayBag(object):
         for i in range(len(self)):
             temp[i] = self.items[i]
         self.items = temp.items
+        
     # Mutator methods
     def clear(self):
         """Makes self become empty."""
