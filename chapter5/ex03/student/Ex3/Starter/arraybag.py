@@ -4,7 +4,6 @@ File: arraybag.py
 Author: Ken Lambert
 """
 
-
 from arrays import Array
 
 class ArrayBag(object):
