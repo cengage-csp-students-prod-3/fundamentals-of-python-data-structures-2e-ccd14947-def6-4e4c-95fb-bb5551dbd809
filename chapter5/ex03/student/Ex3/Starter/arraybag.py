@@ -70,6 +70,12 @@ class ArrayBag(object):
                 total += 1
         return total
 
+    def grow(self):
+        """Double the physical size of the array."""
+        temp = Array(len(self) * 2)
+        for i in range(len(self)):
+            temp[i] = self.items[i]
+        self.items = temp.items
     # Mutator methods
     def clear(self):
         """Makes self become empty."""
@@ -78,18 +84,11 @@ class ArrayBag(object):
 
     def add(self, item):
         """Adds item to self."""
-        """Adds item to self, growing array if needed."""
-    # Check if array is full
         if len(self) == len(self.items):
-            # Grow array (typically double the size)
-            temp = Array(2 * len(self.items))
-            # Copy old items into new array
-            for i in range(len(self)):
-                temp[i] = self.items[i]
-            self.items = temp
-            self.items[len(self)]=item
-            self.size+=1
-            # Check array memory here and increase it if necessary.
-            
-            
+            self.grow()
+        self.items[len(self)]=item
+        self.size+=1
+        # Check array memory here and increase it if necessary
+        
+        
         
