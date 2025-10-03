@@ -85,11 +85,11 @@ class ArrayBag(object):
 
     def add(self, item):
         """Adds item to self."""
+         # Check array memory here and increase it if necessary
         if len(self) == len(self.items):
             self.grow()
         self.items[len(self)]=item
         self.size+=1
-        # Check array memory here and increase it if necessary
-        
+       
         
         
