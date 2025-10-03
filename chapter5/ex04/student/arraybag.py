@@ -117,13 +117,18 @@ class ArrayBag(object):
 
         # 3. Shift items to the right of target left by one position
         for j in range(i, len(self) - 1):
-            self[j] = self[j + 1]
+            self.items[j] = self.items[j + 1]
 
         # 4. Decrement logical size
         self.size -= 1
 
         # 5. Check array memory here and decrease it if necessary
-
+        if len(self) <= len(self.items) // 4 and \
+            2 * len(self) >= ArrayBag.DEFAULT_CAPACITY:
+            temp = Array(len(self.items) // 2)
+            for i in range(len(self)):
+                temp[i] = self.items[i]
+            self.items = temp
             
             
             
