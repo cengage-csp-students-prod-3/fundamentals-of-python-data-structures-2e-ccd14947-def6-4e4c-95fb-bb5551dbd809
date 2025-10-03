@@ -5,7 +5,7 @@ A tester program for bag implementations.
 """
 
 from arraybag import ArrayBag
-from arrays import Array
+
 def test(bagType):
     """Expects a bag type as an argument and runs some tests
     on objects of that type."""

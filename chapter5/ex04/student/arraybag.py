@@ -10,6 +10,8 @@ from arrays import Array
 
 class ArrayBag(object):
     """An array-based bag implementation."""
+	
+	# Reuse your solution from Programming Exercise 5.3 as your starter file
 
     # Class variable
     DEFAULT_CAPACITY = 10
@@ -29,14 +31,6 @@ class ArrayBag(object):
         """Returns True if len(self) == 0, or False otherwise."""
         return len(self) == 0
     
-    def __getitem__(self, index):
-            """Subscript operator for access at index."""
-            return self.items[index]
-    
-    def __setitem__(self, index, newItem):
-        """Subscript operator for replacement at index."""
-        self.items[index] = newItem
-
     def __len__(self):
         """Returns the number of items in self."""
         return self.size
@@ -80,55 +74,12 @@ class ArrayBag(object):
                 total += 1
         return total
 
-    def grow(self):
-        """Double the physical size of the array."""
-        temp = Array(len(self) * 2)
-        for i in range(len(self)):
-            temp[i] = self.items[i]
-        self.items = temp.items
-        
     # Mutator methods
     def clear(self):
         """Makes self become empty."""
         self.size = 0
         self.items = Array(ArrayBag.DEFAULT_CAPACITY)
 
-    def add(self, item):
-        """Adds item to self."""
-        if len(self) == len(self.items):
-            self.grow()
-        self.items[len(self)]=item
-        self.size+=1
-        # Check array memory here and increase it if necessary
-
-    def remove(self, item):
-        """Precondition: item is in self.
-        Raises: KeyError if item is not in self.
-        Postcondition: item is removed from self. """
         
-        # 1. Check precondition and raise an exception if necessary
-        if not item in self:
-            raise KeyError(str(item) + " not in bag")
-
-        # 2. Search for index of target item
-        for i in range(len(self)):
-            if self[i] == item:
-                break
-
-        # 3. Shift items to the right of target left by one position
-        for j in range(i, len(self) - 1):
-            self.items[j] = self.items[j + 1]
-
-        # 4. Decrement logical size
-        self.size -= 1
-
-        # 5. Check array memory here and decrease it if necessary
-        if len(self) <= len(self.items) // 4 and \
-            2 * len(self) >= ArrayBag.DEFAULT_CAPACITY:
-            temp = Array(len(self.items) // 2)
-            for i in range(len(self)):
-                temp[i] = self.items[i]
-            self.items = temp
-            
-            
-            
+        
+        
