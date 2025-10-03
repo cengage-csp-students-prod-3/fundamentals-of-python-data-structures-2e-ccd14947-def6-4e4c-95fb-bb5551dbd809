@@ -89,7 +89,6 @@ class ArrayBag(object):
             self.grow()
         self.items[len(self)]=item
         self.size+=1
-        
         # Check array memory here and increase it if necessary
         
         
