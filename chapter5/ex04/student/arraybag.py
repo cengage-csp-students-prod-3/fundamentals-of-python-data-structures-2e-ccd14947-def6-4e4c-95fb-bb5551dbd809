@@ -52,6 +52,7 @@ class ArrayBag(object):
 
     def clone(self):
         """Returns a copy of self."""
+        return ArrayBag(self)
        
 
     def __eq__(self, other):
