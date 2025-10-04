@@ -91,17 +91,27 @@ class ArrayBag(object):
         """Precondition: item is in self.
         Raises: KeyError if item in not in self.
         Postcondition: item is removed from self."""
-        # Your code here
-        
-        # Check precondition and raise KeyError if necessary
-        
+        # Check precondition and raise if necessary
+        if not item in self:
+            raise KeyError(str(item) + " not in bag")
         # Search for the index of the target item
-       
+        targetIndex = 0
+        for targetItem in self:
+            if targetItem == item:
+                break
+            targetIndex += 1
         # Shift items to the left of target up by one position
-        
+        for i in range(targetIndex, len(self) - 1):
+            self.items[i] = self.items[i + 1]
         # Decrement logical size
-      
+        self.size -= 1
         # Check array memory here and decrease it if necessary
+        if len(self) <= len(self.items) // 4 and \
+           2 * len(self) >= ArrayBag.DEFAULT_CAPACITY:
+            temp = Array(len(self.items) // 2)
+            for i in range(len(self)):
+                temp[i] = self.items[i]
+            self.items = temp
         
         
         
