@@ -1,5 +1,5 @@
 """
-Project 5.3
+Project 5.4
 File: arraybag.py
 Author: Ken Lambert
 """
@@ -79,6 +79,29 @@ class ArrayBag(object):
     def add(self, item):
         """Adds item to self."""
         # Check array memory here and increase it if necessary
+        if len(self) == len(self.items):
+            temp = Array(2 * len(self))
+            for i in range(len(self)):
+                temp[i] = self.items[i]
+            self.items = temp
+        self.items[len(self)] = item
+        self.size += 1
+
+    def remove(self, item):
+        """Precondition: item is in self.
+        Raises: KeyError if item in not in self.
+        Postcondition: item is removed from self."""
+        # Your code here
+        
+        # Check precondition and raise KeyError if necessary
+        
+        # Search for the index of the target item
+       
+        # Shift items to the left of target up by one position
+        
+        # Decrement logical size
+      
+        # Check array memory here and decrease it if necessary
         
         
         
