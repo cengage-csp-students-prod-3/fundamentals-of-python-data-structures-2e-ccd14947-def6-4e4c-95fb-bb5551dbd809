@@ -4,25 +4,23 @@ Check: 1
 Test: 
 Reason: 
 Error : AttributeError - 'Task1' object has no attribute 'assertEquals'
-Timestamp: 2025-10-04 01:39:04.643026
+Timestamp: 2025-10-04 01:41:29.636919
 
 Status: FAILED!
 Check: 2
 Test: 
 Reason: 
 Error : AttributeError - 'Task1' object has no attribute 'assertEquals'
-Timestamp: 2025-10-04 01:39:04.643216
+Timestamp: 2025-10-04 01:41:29.637322
 
-Status: FAILED!
+Status: PASSED!
 Check: 3
-Test: 
-Reason: 
-Error : AssertionError - KeyError not raised
-Timestamp: 2025-10-04 01:39:04.643379
+Test: `remove()` method throws `KeyError` exception if item is not in self
+Reason: None
+Timestamp: 2025-10-04 01:41:29.637449
 
-Status: FAILED!
+Status: PASSED!
 Check: 4
-Test: 
-Reason: 
-Error : AssertionError - KeyError not raised
-Timestamp: 2025-10-04 01:39:04.643505
+Test: `remove()` method throws `KeyError` exception if item is not in self
+Reason: None
+Timestamp: 2025-10-04 01:41:29.637763
