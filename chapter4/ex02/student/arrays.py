@@ -1,10 +1,5 @@
 """
 File: arrays.py
-Project 4.1
-
-
-Adds a logical size attribute and a size method.
-
 
 An Array is a restricted list whose clients can use
 only [], len, iter, and str.
@@ -22,13 +17,9 @@ class Array(object):
     def __init__(self, capacity, fillValue = None):
         """Capacity is the static size of the array.
         fillValue is placed at each position."""
-        self.logicalSize = 0
         self.items = list()
         for count in range(capacity):
             self.items.append(fillValue)
-
-    def size(self):
-        return self.logicalSize
 
     def __len__(self):
         """-> The capacity of the array."""
@@ -39,33 +30,13 @@ class Array(object):
         return str(self.items)
 
     def __iter__(self):
-        """Supports traversal with a for loop."""
+        """Supports iteration over a view of an array."""
         return iter(self.items)
 
     def __getitem__(self, index):
         """Subscript operator for access at index."""
-        if 0 <= index < size(self):
-            return self.items[index]
+        return self.items[index]
 
-        else:
-            raise IndexError
-    
     def __setitem__(self, index, newItem):
         """Subscript operator for replacement at index."""
-        if 0 <= index < size(self):
-            return self.items[index]
-
-        else:
-            raise IndexError
         self.items[index] = newItem
-
-
-def main():
-    """Test code for modified Array class."""
-    a = Array(10)
-    print("Physical size:", len(a))
-    print("Logical size:", a.size())
-    print("Items:", a)
-
-if __name__ == "__main__":
-    main()

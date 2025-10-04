@@ -1,4 +1,5 @@
 """
+Project 5.5
 File: linkedbag.py
 Author: Ken Lambert
 """
@@ -45,6 +46,10 @@ class LinkedBag(object):
         for item in other:
             result.add(item)
         return result
+
+    def clone(self):
+        """Returns a copy of self."""
+        
 
     def __eq__(self, other):
         """Returns True if self equals other,
