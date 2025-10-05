@@ -49,7 +49,7 @@ class LinkedBag(object):
 
     def clone(self):
         """Returns a copy of self."""
-        
+        return LinkedBag(self)
 
     def __eq__(self, other):
         """Returns True if self equals other,
