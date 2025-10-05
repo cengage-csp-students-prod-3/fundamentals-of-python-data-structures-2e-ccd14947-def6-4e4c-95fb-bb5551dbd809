@@ -50,11 +50,6 @@ class ArrayBag(object):
             result.add(item)
         return result
 
-    def clone(self):
-        """Returns a copy of self."""
-        return ArrayBag(self)
-       
-
     def __eq__(self, other):
         """Returns True if self equals other,
         or False otherwise."""
@@ -117,5 +112,5 @@ class ArrayBag(object):
             for i in range(len(self)):
                 temp[i] = self.items[i]
             self.items = temp
-       
+        
         
