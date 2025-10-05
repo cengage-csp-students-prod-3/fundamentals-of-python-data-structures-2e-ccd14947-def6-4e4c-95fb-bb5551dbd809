@@ -4,6 +4,7 @@ File: arrays.py
 An Array is a restricted list whose clients can use
 only [], len, iter, and str.
 
+
 To instantiate, use
 
 <variable> = array(<capacity>, <optional fill value>)
