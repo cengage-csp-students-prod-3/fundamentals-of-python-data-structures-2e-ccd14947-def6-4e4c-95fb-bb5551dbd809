@@ -1,0 +1,42 @@
+
+Status: FAILED!
+Check: 1
+Test: change `Linkedbag` reference
+Reason: Unable to find 'from\sabstractbag\simport\sAbstractBag' in the program.
+Error : str - AssertionError
+Timestamp: 2025-10-06 18:26:47.493628
+
+Status: FAILED!
+Check: 1
+Test: 
+Reason: 
+Error : AssertionError - Failed
+Timestamp: 2025-10-06 18:26:47.493693
+
+Status: FAILED!
+Check: 2
+Test: change `Linkedbag` reference
+Reason: Unable to find 'AbstractBag\.__init__\(self,\s*sourceCollection\)' in the program.
+Error : str - AssertionError
+Timestamp: 2025-10-06 18:26:47.493947
+
+Status: FAILED!
+Check: 2
+Test: 
+Reason: 
+Error : AssertionError - Failed
+Timestamp: 2025-10-06 18:26:47.493980
+
+Status: FAILED!
+Check: 3
+Test: change `Linkedbag` reference
+Reason: Unable to find 'class\sLinkedBag\(AbstractBag\):' in the program.
+Error : str - AssertionError
+Timestamp: 2025-10-06 18:26:47.494177
+
+Status: FAILED!
+Check: 3
+Test: 
+Reason: 
+Error : AssertionError - Failed
+Timestamp: 2025-10-06 18:26:47.494208
