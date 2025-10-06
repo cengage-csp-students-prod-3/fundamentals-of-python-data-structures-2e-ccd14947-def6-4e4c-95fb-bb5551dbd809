@@ -3,10 +3,10 @@ Status: PASSED!
 Check: 1
 Test: Define the `__eq__` method of the `ArraySortedBag` class
 Reason: None
-Timestamp: 2025-10-06 17:14:47.105411
+Timestamp: 2025-10-06 17:15:20.341122
 
 Status: PASSED!
 Check: 2
 Test: Define the `__eq__` method of the `ArraySortedBag` class
 Reason: None
-Timestamp: 2025-10-06 17:14:47.105692
+Timestamp: 2025-10-06 17:15:20.341398
