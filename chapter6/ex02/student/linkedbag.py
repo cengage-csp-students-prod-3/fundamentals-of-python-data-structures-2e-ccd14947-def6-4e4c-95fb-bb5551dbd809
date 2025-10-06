@@ -5,9 +5,9 @@ Author: Ken Lambert
 """
 
 from node import Node
+from abstractbag import AbstractBag
 
-
-class LinkedBag(object):
+class LinkedBag(AbstractBag):
     """A link-based bag implementation."""
 
     # Constructor
@@ -16,6 +16,7 @@ class LinkedBag(object):
         contents of sourceCollection, if it's present."""
         self.items = None
         self.size = 0
+        AbstractBag.__init__(self, sourceCollection)
         if sourceCollection:
             for item in sourceCollection:
                 self.add(item)
