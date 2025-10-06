@@ -34,6 +34,14 @@ class ArraySortedBag(ArrayBag):
     def __eq__(self, other):
         """Returns True if self equals other,
         or False otherwise."""
+        if self is other: return True
+        if type(self) != type(other) or \
+           len(self) != len(other):
+            return False
+        for item in self:
+            if self.count(item) != other.count(item):
+                return False
+        return True
 
 
     # Mutator methods
