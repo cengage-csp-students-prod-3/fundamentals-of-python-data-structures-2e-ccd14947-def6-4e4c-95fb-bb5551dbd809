@@ -3,8 +3,9 @@ File: abstractbag.py
 Project 6.3
 Author: Ken Lambert
 """
+from abstractcollection import AbstractCollection
 
-class AbstractBag(object):
+class AbstractBag(AbstractCollection):
     """An abstract bag implementation."""
 
     # Constructor
@@ -12,6 +13,7 @@ class AbstractBag(object):
         """Sets the initial state of self, which includes the
         contents of sourceCollection, if it's present."""
         self.size = 0
+        AbstractCollection.__init__(self, sourceCollection)
         if sourceCollection:
             for item in sourceCollection:
                 self.add(item)
