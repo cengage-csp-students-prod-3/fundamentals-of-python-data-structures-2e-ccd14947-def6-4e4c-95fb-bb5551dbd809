@@ -1,0 +1,28 @@
+
+Status: FAILED!
+Check: 1
+Test: 
+Reason: 
+Error : AssertionError - None != 5
+Timestamp: 2025-10-20 17:50:01.004670
+
+Status: FAILED!
+Check: 2
+Test: 
+Reason: 
+Error : AttributeError - 'ArrayStack' object has no attribute 'size'
+Timestamp: 2025-10-20 17:50:01.004792
+
+Status: FAILED!
+Check: 3
+Test: 
+Reason: 
+Error : AttributeError - 'ArrayStack' object has no attribute 'size'
+Timestamp: 2025-10-20 17:50:01.004867
+
+Status: FAILED!
+Check: 4
+Test: 
+Reason: 
+Error : AssertionError - None != 3
+Timestamp: 2025-10-20 17:50:01.004942
