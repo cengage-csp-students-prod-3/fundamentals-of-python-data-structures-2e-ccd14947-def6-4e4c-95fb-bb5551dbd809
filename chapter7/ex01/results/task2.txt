@@ -1,0 +1,13 @@
+
+Status: FAILED!
+Check: 1
+Test: 
+Reason: 
+Error : AssertionError - KeyError not raised
+Timestamp: 2025-10-20 18:17:28.167902
+
+Status: PASSED!
+Check: 2
+Test: Throws exception when preconditions are not met in `LinkedStack`
+Reason: None
+Timestamp: 2025-10-20 18:17:28.168034
