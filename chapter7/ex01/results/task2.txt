@@ -1,13 +1,12 @@
 
-Status: FAILED!
+Status: PASSED!
 Check: 1
-Test: 
-Reason: 
-Error : AssertionError - KeyError not raised
-Timestamp: 2025-10-20 18:17:28.167902
+Test: Throws exception when preconditions are not met in `ArrayStack`
+Reason: None
+Timestamp: 2025-10-20 18:20:47.491752
 
 Status: PASSED!
 Check: 2
 Test: Throws exception when preconditions are not met in `LinkedStack`
 Reason: None
-Timestamp: 2025-10-20 18:17:28.168034
+Timestamp: 2025-10-20 18:20:47.491893
