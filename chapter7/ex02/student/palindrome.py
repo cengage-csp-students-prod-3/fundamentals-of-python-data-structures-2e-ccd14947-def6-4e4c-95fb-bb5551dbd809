@@ -9,7 +9,11 @@ from arraystack import ArrayStack
 def isPalindrome(string):          
     """Returns True if string is a palindrome
     or False otherwise."""
-   
+    if isPalindrome(string):
+        return True
+    else:
+        return False
+
 
 def main():
     while True:
