@@ -3,22 +3,22 @@ Status: PASSED!
 Check: 1
 Test: Defined `peek()` function in `LinkedStack`
 Reason: None
-Timestamp: 2025-10-20 18:21:24.181562
+Timestamp: 2025-10-20 18:44:50.387009
 
 Status: PASSED!
 Check: 2
 Test: Defined `push()` function in `LinkedStack`
 Reason: None
-Timestamp: 2025-10-20 18:21:24.181671
+Timestamp: 2025-10-20 18:44:50.387134
 
 Status: PASSED!
 Check: 3
 Test: Defined `clear()` function in `LinkedStack`
 Reason: None
-Timestamp: 2025-10-20 18:21:24.181744
+Timestamp: 2025-10-20 18:44:50.387205
 
 Status: PASSED!
 Check: 4
 Test: Define`pop()` function in `LinkedStack`
 Reason: None
-Timestamp: 2025-10-20 18:21:24.181814
+Timestamp: 2025-10-20 18:44:50.387277
