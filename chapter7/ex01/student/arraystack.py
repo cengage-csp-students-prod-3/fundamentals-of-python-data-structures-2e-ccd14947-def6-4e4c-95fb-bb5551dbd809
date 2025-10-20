@@ -9,7 +9,7 @@ from abstractstack import AbstractStack
 class ArrayStack(AbstractStack):
     """An array-based stack implementation."""
 
-    # Class variable
+    # Class variable trsj
     DEFAULT_CAPACITY = 10
 
     # Constructor
