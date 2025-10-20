@@ -32,6 +32,8 @@ class ArrayStack(AbstractStack):
         """Returns the item at the top of the stack.
         Precondition: the stack is not empty.
         Raises: KeyError if stack is empty."""
+        if self.isEmpty():
+            raise KeyError("The stack is empty.")
         # Check precondition here
         return self.items[len(self) - 1]
 
@@ -52,7 +54,8 @@ class ArrayStack(AbstractStack):
         Precondition: the stack is not empty.
         Raises: KeyError if stack is empty.
         Postcondition: the top item is removed from the stack."""
-        
+        if self.isEmpty():
+            raise KeyError("The stack is empty.")
         # Check precondition here
         oldItem = self.items[len(self) - 1]
         self.size -= 1
