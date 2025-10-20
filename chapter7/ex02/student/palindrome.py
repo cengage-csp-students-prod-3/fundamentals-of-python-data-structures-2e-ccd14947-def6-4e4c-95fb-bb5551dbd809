@@ -6,15 +6,24 @@ Project 7.2
 
 from arraystack import ArrayStack
 
-def isPalindrome(string):          
+def isPalindrome(string):    
     """Returns True if string is a palindrome
     or False otherwise."""
-    if isPalindrome(string):
-        return True
-    else:
-        return False
+    stack = ArrayStack()
+    
+    # Push each character onto the stack
+    for ch in string:
+        stack.push(ch)
+    
+    # Build reversed string by popping from the stack
+    reversedString = ""
+    while not stack.isEmpty():
+        reversedString += stack.pop()
+    
+    # Compare original and reversed strings
+    return string == reversedString
+   
 
-#fuyyuyfilgliu
 def main():
     while True:
         string = input("Enter a string or Return to quit: ")
