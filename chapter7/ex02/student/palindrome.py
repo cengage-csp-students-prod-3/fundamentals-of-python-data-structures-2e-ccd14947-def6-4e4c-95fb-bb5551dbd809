@@ -14,7 +14,7 @@ def isPalindrome(string):
     else:
         return False
 
-
+#fuyyuyfilgliu
 def main():
     while True:
         string = input("Enter a string or Return to quit: ")
