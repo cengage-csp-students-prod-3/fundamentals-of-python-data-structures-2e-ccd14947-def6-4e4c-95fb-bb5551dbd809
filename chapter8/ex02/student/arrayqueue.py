@@ -73,7 +73,7 @@ class ArrayQueue(AbstractCollection):
         self.size += 1
     
     def pop(self):
-         """Removes and returns the item at the front of the queue.
+        """Removes and returns the item at the front of the queue.
         Precondition: the queue is not empty.
         Raises: KeyError if queue is empty.
         Postcondition: the front item is removed from the queue."""
@@ -81,13 +81,14 @@ class ArrayQueue(AbstractCollection):
             raise KeyError("Queue is empty")
         data = self.items[self.front]
         self.size -= 1
-        if self.isEmpty(): self.front = self.rear = -1                  
+        if self.isEmpty():
+            self.front = self.rear = -1
         elif self.front == len(self.items) - 1:
             self.front = 0
         else:
             self.front += 1
         if len(self) <= .25 * len(self.items) and \
-           ArrayQueue.DEFAULT_CAPACITY <= len(self.items) // 2:
+                ArrayQueue.DEFAULT_CAPACITY <= len(self.items) // 2:
             tempArray = Array(len(self.items) // 2)
             i = 0
             for item in self:
@@ -98,6 +99,7 @@ class ArrayQueue(AbstractCollection):
                 self.front = 0
                 self.rear = len(self) - 1
         return data
-        
-           
          
+
+
+

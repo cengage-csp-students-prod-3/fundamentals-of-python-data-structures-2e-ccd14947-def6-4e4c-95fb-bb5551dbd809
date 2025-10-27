@@ -36,6 +36,9 @@ class LinkedQueue(AbstractCollection):
     # Mutator methods
     def clear(self):
         """Makes self become empty."""
+        # Both front and rear pointers must be set
+        # equal to None if they are cleared/empty.
+        # The size should also equal 0.
         self.front = None
         self.rear = None
         self.size = 0
@@ -65,5 +68,3 @@ class LinkedQueue(AbstractCollection):
             self.rear = None
         self.size -= 1
         return oldItem
-        
-        
