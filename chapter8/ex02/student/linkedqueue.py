@@ -36,7 +36,10 @@ class LinkedQueue(AbstractCollection):
     # Mutator methods
     def clear(self):
         """Makes self become empty."""
-        pass
+        self.front = None
+        self.rear = None
+        self.size = 0
+
     
     def add(self, item):
         """Adds item to the rear of the queue."""
