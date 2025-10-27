@@ -46,16 +46,58 @@ class ArrayQueue(AbstractCollection):
     # Mutator methods
     def clear(self):
         """Makes self become empty."""
-        pass
+        self.size = 0
+        self.front = self.rear = -1
+        self.items = Array(ArrayQueue.DEFAULT_CAPACITY)
     
     def add(self, item):
         """Inserts item at rear of the queue."""
-        pass
+        # Resize array if full
+        if len(self) == len(self.items):
+            tempArray = Array(len(self.items) * 2)
+            i = 0
+            for nextItem in self:
+                tempArray[i] = nextItem
+                i += 1
+            self.items = tempArray
+            if not self.isEmpty():
+                self.front = 0
+                self.rear = len(self) - 1
+        if self.isEmpty():
+            self.front = self.rear = 0
+        elif self.rear == len(self.items) - 1:
+            self.rear = 0
+        else:
+            self.rear += 1
+        self.items[self.rear] = item
+        self.size += 1
     
     def pop(self):
-        """Removes and returns the item at the front of the queue.
+         """Removes and returns the item at the front of the queue.
         Precondition: the queue is not empty.
         Raises: KeyError if queue is empty.
         Postcondition: the front item is removed from the queue."""
-        return None        
+        if self.isEmpty():
+            raise KeyError("Queue is empty")
+        data = self.items[self.front]
+        self.size -= 1
+        if self.isEmpty(): self.front = self.rear = -1                  
+        elif self.front == len(self.items) - 1:
+            self.front = 0
+        else:
+            self.front += 1
+        if len(self) <= .25 * len(self.items) and \
+           ArrayQueue.DEFAULT_CAPACITY <= len(self.items) // 2:
+            tempArray = Array(len(self.items) // 2)
+            i = 0
+            for item in self:
+                tempArray[i] = item
+                i += 1
+            self.items = tempArray
+            if not self.isEmpty():
+                self.front = 0
+                self.rear = len(self) - 1
+        return data
+        
+           
          
