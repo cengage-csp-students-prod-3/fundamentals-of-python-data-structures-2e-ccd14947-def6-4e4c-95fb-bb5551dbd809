@@ -37,7 +37,9 @@ class LinkedQueue(AbstractCollection):
     def clear(self):
         """Makes self become empty."""
         # Write your code here
-        self.clear()
+        self.data = None
+        self.other_attribute = None
+
     
     def add(self, item):
         """Adds item to the rear of the queue."""
