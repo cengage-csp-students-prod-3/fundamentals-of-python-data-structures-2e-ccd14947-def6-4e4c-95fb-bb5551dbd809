@@ -3,10 +3,10 @@ Status: PASSED!
 Check: 1
 Test: `pop()` functions as expected
 Reason: None
-Timestamp: 2025-10-27 22:31:20.529663
+Timestamp: 2025-10-27 22:36:36.246851
 
 Status: PASSED!
 Check: 2
 Test: `pop()` raises KeyError when the queue is empty
 Reason: None
-Timestamp: 2025-10-27 22:31:20.529798
+Timestamp: 2025-10-27 22:36:36.246981
