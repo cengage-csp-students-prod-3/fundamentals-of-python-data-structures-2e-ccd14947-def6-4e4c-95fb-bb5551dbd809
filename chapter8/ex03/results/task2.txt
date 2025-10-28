@@ -1,0 +1,14 @@
+
+Status: FAILED!
+Check: 1
+Test: 
+Reason: 
+Error : AttributeError - 'LinkedQueue' object has no attribute 'remove'
+Timestamp: 2025-10-28 16:22:33.825286
+
+Status: FAILED!
+Check: 2
+Test: 
+Reason: 
+Error : AttributeError - 'LinkedQueue' object has no attribute 'remove'
+Timestamp: 2025-10-28 16:22:33.825396
