@@ -97,7 +97,7 @@ class LinkedQueue(AbstractCollection):
             prev = cursor
             cursor = cursor.next
 
-    raise KeyError()
+        raise KeyError()
 
         
  
