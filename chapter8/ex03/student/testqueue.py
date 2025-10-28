@@ -44,6 +44,10 @@ def test(queueType):
     for count in range(5):
         q.add(count)
     print(q)
-
-test(ArrayQueue)
+    try:
+        q.remove(6)
+        print("Removing 6:", q)
+    except KeyError:
+        print("6 not found")
+#test(ArrayQueue)
 #test(LinkedQueue)
