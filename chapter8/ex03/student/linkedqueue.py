@@ -73,8 +73,7 @@ class LinkedQueue(AbstractCollection):
         """Removes the first occurrence of item from the queue and
         returns it. Raises KeyError if the item is not found."""
         if self.isEmpty():
-            #raise KeyError()
-            return
+            raise KeyError(item)
 
         prev = None
         cursor = self.front
@@ -97,7 +96,9 @@ class LinkedQueue(AbstractCollection):
 
             prev = cursor
             cursor = cursor.next
-        #raise KeyError()
+
+        raise KeyError(item)
+    # End of remove method
 
         
  
