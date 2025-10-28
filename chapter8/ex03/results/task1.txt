@@ -3,12 +3,12 @@ Status: FAILED!
 Check: 1
 Test: 
 Reason: 
-Error : AttributeError - 'Array' object has no attribute 'remove'
-Timestamp: 2025-10-28 00:15:07.534073
+Error : AttributeError - 'ArrayQueue' object has no attribute 'remove'
+Timestamp: 2025-10-28 16:22:04.094947
 
 Status: FAILED!
 Check: 2
 Test: 
 Reason: 
-Error : AttributeError - 'Array' object has no attribute 'remove'
-Timestamp: 2025-10-28 00:15:07.534198
+Error : AttributeError - 'ArrayQueue' object has no attribute 'remove'
+Timestamp: 2025-10-28 16:22:04.095094
