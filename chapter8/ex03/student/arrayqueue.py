@@ -152,5 +152,3 @@ def remove(self, item):
                 self.rear = len(self) - 1
 
         return item
-        
-         

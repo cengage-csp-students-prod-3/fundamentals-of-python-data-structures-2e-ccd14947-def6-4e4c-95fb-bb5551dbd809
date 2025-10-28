@@ -64,7 +64,7 @@ class LinkedQueue(AbstractCollection):
         self.size -= 1
         return oldItem
     
-def remove(self, item):
+    def remove(self, item):
         """Removes the first occurrence of item from the queue and
         returns it. Raises KeyError if the item is not found."""
         if self.isEmpty():
@@ -96,6 +96,7 @@ def remove(self, item):
 
         
  
+
 
 
 
