@@ -1,6 +1,6 @@
 """
 File: linkedqueue.py
-Project 8.3
+Project 8.2
 """
 
 from node import Node
@@ -23,7 +23,7 @@ class LinkedQueue(AbstractCollection):
         while not cursor is None:
             yield cursor.data
             cursor = cursor.next
-        
+    
     def peek(self):
         """
         Returns the item at the front of the queue.
@@ -36,9 +36,14 @@ class LinkedQueue(AbstractCollection):
     # Mutator methods
     def clear(self):
         """Makes self become empty."""
+        # Both front and rear pointers must be set
+        # equal to None if they are cleared/empty.
+        # The size should also equal 0.
+        self.front = None
+        self.rear = None
         self.size = 0
-        self.front = self.rear = None
 
+    
     def add(self, item):
         """Adds item to the rear of the queue."""
         newNode = Node(item, None)
@@ -63,12 +68,12 @@ class LinkedQueue(AbstractCollection):
             self.rear = None
         self.size -= 1
         return oldItem
-    
+        
     def remove(self, item):
         """Removes the first occurrence of item from the queue and
         returns it. Raises KeyError if the item is not found."""
         if self.isEmpty():
-            raise KeyError("Item not in queue")
+            raise KeyError(item)
 
         prev = None
         cursor = self.front
@@ -92,18 +97,9 @@ class LinkedQueue(AbstractCollection):
             prev = cursor
             cursor = cursor.next
 
-        raise KeyError("Item not in queue")
+        raise KeyError(item)
 
         
  
 
 
-
-
-        
- 
-
-
-
-
-        

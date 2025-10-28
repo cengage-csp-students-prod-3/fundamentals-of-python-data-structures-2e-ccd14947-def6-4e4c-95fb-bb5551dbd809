@@ -1,6 +1,6 @@
 """
 File: arrayqueue.py
-Project 8.3
+Project 8.2
 """
 
 from arrays import Array
@@ -8,6 +8,8 @@ from abstractcollection import AbstractCollection
 
 class ArrayQueue(AbstractCollection):
     """An array-based queue implementation."""
+
+    # Simulates a circlular queue within an array
 
     # Class variable
     DEFAULT_CAPACITY = 10
@@ -32,7 +34,7 @@ class ArrayQueue(AbstractCollection):
                 cursor += 1
         if cursor == self.rear and cursor != -1:
             yield self.items[cursor]
-
+    
     def peek(self):
         """Returns the item at the front of the queue.
         Precondition: the queue is not empty.
@@ -40,7 +42,6 @@ class ArrayQueue(AbstractCollection):
         if self.isEmpty():
             raise KeyError("Queue is empty")
         return self.items[self.front]
-    
 
     # Mutator methods
     def clear(self):
@@ -48,7 +49,7 @@ class ArrayQueue(AbstractCollection):
         self.size = 0
         self.front = self.rear = -1
         self.items = Array(ArrayQueue.DEFAULT_CAPACITY)
-
+    
     def add(self, item):
         """Inserts item at rear of the queue."""
         # Resize array if full
@@ -71,7 +72,6 @@ class ArrayQueue(AbstractCollection):
         self.items[self.rear] = item
         self.size += 1
     
-        
     def pop(self):
         """Removes and returns the item at the front of the queue.
         Precondition: the queue is not empty.
@@ -81,13 +81,14 @@ class ArrayQueue(AbstractCollection):
             raise KeyError("Queue is empty")
         data = self.items[self.front]
         self.size -= 1
-        if self.isEmpty(): self.front = self.rear = -1                  
+        if self.isEmpty():
+            self.front = self.rear = -1
         elif self.front == len(self.items) - 1:
             self.front = 0
         else:
             self.front += 1
         if len(self) <= .25 * len(self.items) and \
-           ArrayQueue.DEFAULT_CAPACITY <= len(self.items) // 2:
+                ArrayQueue.DEFAULT_CAPACITY <= len(self.items) // 2:
             tempArray = Array(len(self.items) // 2)
             i = 0
             for item in self:
@@ -98,12 +99,13 @@ class ArrayQueue(AbstractCollection):
                 self.front = 0
                 self.rear = len(self) - 1
         return data
-		
+        
+
     def remove(self, item):
         """Removes the first occurrence of item from the queue and
         returns it. Raises KeyError if the item is not found."""
         if self.isEmpty():
-            raise KeyError("Item not in queue")
+            raise KeyError(item)
 
         # Find the index of the item in the circular array
         idx = self.front
@@ -112,10 +114,10 @@ class ArrayQueue(AbstractCollection):
             if self.items[idx] == item:
                 found = True
                 break
-        idx = 0 if idx == len(self.items) - 1 else idx + 1
+            idx = 0 if idx == len(self.items) - 1 else idx + 1
 
         if not found:
-            raise KeyError("Item not in queue")
+            raise KeyError(item)
 
         # Shift elements left (toward front) to overwrite the removed item
         curr = idx
@@ -152,3 +154,7 @@ class ArrayQueue(AbstractCollection):
                 self.rear = len(self) - 1
 
         return item
+
+
+
+
