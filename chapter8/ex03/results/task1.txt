@@ -1,14 +1,13 @@
 
-Status: FAILED!
+Status: PASSED!
 Check: 1
-Test: 
-Reason: 
-Error : KeyError - 'Item not in queue'
-Timestamp: 2025-10-28 17:56:12.887968
+Test: `ArrayQueue.remove` removes item in queue
+Reason: None
+Timestamp: 2025-10-28 18:03:26.529149
 
 Status: FAILED!
 Check: 2
 Test: 
 Reason: 
-Error : KeyError - 'Item not in queue'
-Timestamp: 2025-10-28 17:56:12.888130
+Error : KeyError - 8
+Timestamp: 2025-10-28 18:03:26.529285
