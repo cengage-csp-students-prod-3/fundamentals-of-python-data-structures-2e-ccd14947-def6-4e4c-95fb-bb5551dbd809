@@ -21,8 +21,6 @@ class Cashier(object):
         self.currentCustomer = None
         self.queue = LinkedQueue()
 
-    def getLineLenght(self, ):
-
     def addCustomer(self, c):
         """Adds an arriving customer to my line."""
         self.queue.add(c)

@@ -64,5 +64,39 @@ class LinkedQueue(AbstractCollection):
         self.size -= 1
         return oldItem
     
-	# Write your code here
+def remove(self, item):
+        """Removes the first occurrence of item from the queue and
+        returns it. Raises KeyError if the item is not found."""
+        if self.isEmpty():
+            raise KeyError("Item not in queue")
+
+        prev = None
+        cursor = self.front
+        while cursor is not None:
+            if cursor.data == item:
+                # Removing front node
+                if prev is None:
+                    self.front = cursor.next
+                    if self.front is None:
+                        # Queue is now empty
+                        self.rear = None
+                else:
+                    prev.next = cursor.next
+                    if cursor is self.rear:
+                        # Removed the rear node
+                        self.rear = prev
+
+                self.size -= 1
+                return item
+
+            prev = cursor
+            cursor = cursor.next
+
+        raise KeyError("Item not in queue")
+
+        
+ 
+
+
+
         
