@@ -3,11 +3,11 @@ Status: PASSED!
 Check: 1
 Test: `LinkedQueue.remove` removes item in queue
 Reason: None
-Timestamp: 2025-10-28 17:55:33.244229
+Timestamp: 2025-10-28 17:56:14.007427
 
 Status: FAILED!
 Check: 2
 Test: 
 Reason: 
 Error : KeyError - 'Item not in queue'
-Timestamp: 2025-10-28 17:55:33.244367
+Timestamp: 2025-10-28 17:56:14.007587
