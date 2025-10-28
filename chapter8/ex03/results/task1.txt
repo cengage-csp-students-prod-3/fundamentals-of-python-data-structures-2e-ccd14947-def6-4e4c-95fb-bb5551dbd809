@@ -3,12 +3,12 @@ Status: FAILED!
 Check: 1
 Test: 
 Reason: 
-Error : AttributeError - 'ArrayQueue' object has no attribute 'remove'
-Timestamp: 2025-10-28 17:20:48.265279
+Error : KeyError - 'Item not in queue'
+Timestamp: 2025-10-28 17:55:30.482295
 
 Status: FAILED!
 Check: 2
 Test: 
 Reason: 
-Error : AttributeError - 'ArrayQueue' object has no attribute 'remove'
-Timestamp: 2025-10-28 17:20:48.265408
+Error : KeyError - 'Item not in queue'
+Timestamp: 2025-10-28 17:55:30.482459
