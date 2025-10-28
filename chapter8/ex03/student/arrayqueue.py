@@ -70,17 +70,24 @@ class ArrayQueue(AbstractCollection):
         self.items[self.rear] = item
         self.size += 1
     
+    # def remove(self, item):
+    #     if item not in self:
+    #         raise KeyError ("Item not found.")
+    #     targetIndex=0
+    #     for targetItem in self:
+    #         if targetItem == item:
+    #             break
+    #         targetIndex += 1
+    #     for i in range(targetIndex, len(self), -1):
+    #         self.items[i] = self.items[i+1]
+    #     self.size -=1
+
     def remove(self, item):
-        if item not in self:
-            raise KeyError ("Item not found.")
-        targetIndex=0
-        for targetItem in self:
-            if targetItem == item:
-                break
-            targetIndex += 1
-        for i in range(targetIndex, len(self), -1):
-            self.items[i] = self.items[i+1]
-        self.size -=1
+        if item in self.items:
+            self.items.remove(item)
+        else:
+            raise ValueError(f"Item '{item}' not found in the queue")
+        
     def pop(self):
         """Removes and returns the item at the front of the queue.
         Precondition: the queue is not empty.
