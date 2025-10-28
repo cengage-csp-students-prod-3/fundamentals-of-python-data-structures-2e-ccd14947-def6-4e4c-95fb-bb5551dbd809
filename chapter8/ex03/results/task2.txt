@@ -1,14 +1,13 @@
 
-Status: FAILED!
+Status: PASSED!
 Check: 1
-Test: 
-Reason: 
-Error : AttributeError - 'LinkedQueue' object has no attribute 'remove'
-Timestamp: 2025-10-28 16:22:33.825286
+Test: `LinkedQueue.remove` removes item in queue
+Reason: None
+Timestamp: 2025-10-28 16:39:27.721666
 
 Status: FAILED!
 Check: 2
 Test: 
 Reason: 
-Error : AttributeError - 'LinkedQueue' object has no attribute 'remove'
-Timestamp: 2025-10-28 16:22:33.825396
+Error : KeyError - 'Item not in queue'
+Timestamp: 2025-10-28 16:39:27.721819
