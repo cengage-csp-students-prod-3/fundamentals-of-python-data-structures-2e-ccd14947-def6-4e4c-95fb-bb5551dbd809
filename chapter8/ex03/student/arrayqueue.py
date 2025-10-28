@@ -105,7 +105,7 @@ class ArrayQueue(AbstractCollection):
         """Removes the first occurrence of item from the queue and
         returns it. Raises KeyError if the item is not found."""
         if self.isEmpty():
-            raise KeyError(item)
+            raise KeyError()
 
         # Find the index of the item in the circular array
         idx = self.front
@@ -117,7 +117,7 @@ class ArrayQueue(AbstractCollection):
             idx = 0 if idx == len(self.items) - 1 else idx + 1
 
         if not found:
-            raise KeyError(item)
+            raise KeyError()
 
         # Shift elements left (toward front) to overwrite the removed item
         curr = idx
