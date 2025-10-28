@@ -49,5 +49,5 @@ def test(queueType):
         print("Removing 6:", q)
     except KeyError:
         print("6 not found")
-#test(ArrayQueue)
-#test(LinkedQueue)
+test(ArrayQueue)
+test(LinkedQueue)

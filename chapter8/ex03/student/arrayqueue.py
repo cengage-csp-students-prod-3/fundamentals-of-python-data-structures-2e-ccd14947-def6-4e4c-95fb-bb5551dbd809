@@ -99,7 +99,7 @@ class ArrayQueue(AbstractCollection):
                 self.rear = len(self) - 1
         return data
 		
-def remove(self, item):
+    def remove(self, item):
         """Removes the first occurrence of item from the queue and
         returns it. Raises KeyError if the item is not found."""
         if self.isEmpty():
@@ -112,7 +112,7 @@ def remove(self, item):
             if self.items[idx] == item:
                 found = True
                 break
-            idx = 0 if idx == len(self.items) - 1 else idx + 1
+        idx = 0 if idx == len(self.items) - 1 else idx + 1
 
         if not found:
             raise KeyError("Item not in queue")
