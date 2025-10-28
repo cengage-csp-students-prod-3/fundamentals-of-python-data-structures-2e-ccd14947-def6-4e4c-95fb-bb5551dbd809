@@ -40,6 +40,7 @@ class ArrayQueue(AbstractCollection):
         if self.isEmpty():
             raise KeyError("Queue is empty")
         return self.items[self.front]
+    
 
     # Mutator methods
     def clear(self):
@@ -81,12 +82,6 @@ class ArrayQueue(AbstractCollection):
     #     for i in range(targetIndex, len(self), -1):
     #         self.items[i] = self.items[i+1]
     #     self.size -=1
-
-    def remove(self, item):
-        if item in self.items:
-            self.items.remove(item)
-        else:
-            raise ValueError(f"Item '{item}' not found in the queue")
         
     def pop(self):
         """Removes and returns the item at the front of the queue.
