@@ -25,16 +25,13 @@ def test(queueType):
     theClone.clear()
     print("Length of clone after clear:",  len(theClone))
     print("Pop 3 items:", end = " ")
-    for count in range(3): 
-        print(q.pop(), end = " ")
+    for count in range(3): print(q.pop(), end = " ")
     print("\nQueue: ", q)
     print("Adding 11 and 12:")
-    for item in range(11, 13): 
-        q.add(item)
+    for item in range(11, 13): q.add(item)
     print("Queue: ", q)    
     print("Popping items (front to rear): ", end="")
-    while not q.isEmpty(): 
-        print(q.pop(), end=" ")
+    while not q.isEmpty(): print(q.pop(), end=" ")
     print("\nLength:", len(q))
     print("Empty:", q.isEmpty())
     print("Create with 11 items:")
@@ -47,10 +44,6 @@ def test(queueType):
     for count in range(5):
         q.add(count)
     print(q)
-    try:
-        q.remove(6)
-        print("Removing 6:", q)
-    except KeyError:
-        print("6 not found")
+
 test(ArrayQueue)
 #test(LinkedQueue)
