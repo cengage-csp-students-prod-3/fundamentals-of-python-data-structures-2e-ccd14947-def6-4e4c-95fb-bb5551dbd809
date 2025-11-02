@@ -1,6 +1,6 @@
 """
 File: linkedqueue.py
-Project 8.3
+Project 8.1
 """
 
 from node import Node
@@ -63,6 +63,5 @@ class LinkedQueue(AbstractCollection):
             self.rear = None
         self.size -= 1
         return oldItem
-    
-	# Write your code here
+        
         
