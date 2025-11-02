@@ -10,6 +10,9 @@ from linkedqueue import LinkedQueue
 
 class Cashier(object):
     """Represents a cashier."""
+    def getLineLength(self):
+        """Returns the number of customers in the line."""
+        return len(self.queue)
 
     def __init__(self, number):
         """Maintains a cashier number, a queue of customers,

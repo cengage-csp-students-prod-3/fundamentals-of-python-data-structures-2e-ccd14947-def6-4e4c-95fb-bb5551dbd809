@@ -12,6 +12,17 @@ import random
 
 class MarketModel(object):
 
+    def pickCashier(self):
+        """Returns the cashier for the next customer, based on the
+        shortest line of customers."""
+        minIndex = 0
+        minLineLength = 0
+        for index in range(len(self.cashiers)):
+            if self.cashiers[index].getLineLength() <= minLineLength:
+                minIndex = index
+                minLineLength = self.cashiers[index].getLineLength()
+        return self.cashiers[minIndex]
+    
     def __init__(self, lengthOfSimulation, averageTimePerCus,
                  probabilityOfNewArrival, numCashiers):
         self.probabilityOfNewArrival = probabilityOfNewArrival
