@@ -1,12 +1,42 @@
 """
 File: linkedqueue.py
-Project 8.1
+Project 8.2
 """
 
 from node import Node
 from abstractcollection import AbstractCollection
 
 class LinkedQueue(AbstractCollection):
+
+    def remove(self, item):
+        """Removes the first occurrence of item from the queue and
+        returns it. Raises KeyError if the item is not found."""
+        if self.isEmpty():
+            raise KeyError(item)
+
+        prev = None
+        cursor = self.front
+        while cursor is not None:
+            if cursor.data == item:
+                # Removing front node
+                if prev is None:
+                    self.front = cursor.next
+                    if self.front is None:
+                        # Queue is now empty
+                        self.rear = None
+                else:
+                    prev.next = cursor.next
+                    if cursor is self.rear:
+                        # Removed the rear node
+                        self.rear = prev
+
+                self.size -= 1
+                return item
+
+            prev = cursor
+            cursor = cursor.next
+
+        raise KeyError(item)
     """A link-based queue implementation."""
 
     # Constructor
@@ -23,7 +53,7 @@ class LinkedQueue(AbstractCollection):
         while not cursor is None:
             yield cursor.data
             cursor = cursor.next
-        
+    
     def peek(self):
         """
         Returns the item at the front of the queue.
@@ -36,9 +66,14 @@ class LinkedQueue(AbstractCollection):
     # Mutator methods
     def clear(self):
         """Makes self become empty."""
+        # Both front and rear pointers must be set
+        # equal to None if they are cleared/empty.
+        # The size should also equal 0.
+        self.front = None
+        self.rear = None
         self.size = 0
-        self.front = self.rear = None
 
+    
     def add(self, item):
         """Adds item to the rear of the queue."""
         newNode = Node(item, None)
@@ -64,4 +99,4 @@ class LinkedQueue(AbstractCollection):
         self.size -= 1
         return oldItem
         
-        
+    
