@@ -97,6 +97,58 @@ class ArrayQueue(AbstractCollection):
                 self.rear = len(self) - 1
         return data
 		
-	# Write your code here
+	def remove(self, item):
+        """Removes the first occurrence of item from the queue and
+        returns it. Raises KeyError if the item is not found."""
+        if self.isEmpty():
+            raise KeyError(item)
+
+        # Find the index of the item in the circular array
+        idx = self.front
+        found = False
+        for _ in range(len(self)):
+            if self.items[idx] == item:
+                found = True
+                break
+            idx = 0 if idx == len(self.items) - 1 else idx + 1
+
+        if not found:
+            raise KeyError(item)
+
+        # Shift elements left (toward front) to overwrite the removed item
+        curr = idx
+        while curr != self.rear:
+            next_idx = 0 if curr == len(self.items) - 1 else curr + 1
+            self.items[curr] = self.items[next_idx]
+            curr = next_idx
+
+        # Clear the old rear position
+        self.items[self.rear] = None
+
+        # Update rear pointer
+        if self.rear == self.front:
+            # Removed the only element
+            self.front = self.rear = -1
+        elif self.rear == 0:
+            self.rear = len(self.items) - 1
+        else:
+            self.rear -= 1
+
+        self.size -= 1
+
+        # Possibly shrink underlying array (same policy as pop)
+        if len(self) <= .25 * len(self.items) and \
+                ArrayQueue.DEFAULT_CAPACITY <= len(self.items) // 2:
+            tempArray = Array(len(self.items) // 2)
+            i = 0
+            for elem in self:
+                tempArray[i] = elem
+                i += 1
+            self.items = tempArray
+            if not self.isEmpty():
+                self.front = 0
+                self.rear = len(self) - 1
+
+        return item
         
          

@@ -10,16 +10,22 @@ from linkedqueue import LinkedQueue
 class Cashier(object):
     """Represents a cashier."""
 
-    def __init__(self):
+    def __init__(self, number):
         """Maintains a cashier number, a queue of customers,
         number of customers served, total customer wait time,
         and a current customer being processed."""
         # Write your code here
         
+        # self.totalCustomerWaitTime = 0
+        # self.customersServed = 0
+        # self.currentCustomer = None
+        # self.queue = LinkedQueue()
+        self.number = number
         self.totalCustomerWaitTime = 0
         self.customersServed = 0
         self.currentCustomer = None
         self.queue = LinkedQueue()
+
 
     def addCustomer(self, c):
         """Adds an arriving customer to my line."""
@@ -49,15 +55,27 @@ class Cashier(object):
     def __str__(self):
         """Returns my results: my total customers served,
         my average wait time per customer, and customers left on my queue."""
-        result = "TOTALS FOR THE CASHIER\n" + \
-                 "Number of customers served:        " + \
-                 str(self.customersServed) + "\n"
+        # result = "TOTALS FOR THE CASHIER\n" + \
+        #          "Number of customers served:        " + \
+        #          str(self.customersServed) + "\n"
+        # if self.customersServed != 0:
+        #     aveWaitTime = self.totalCustomerWaitTime /\
+        #                   self.customersServed
+        #     result += "Number of customers left in queue: " + \
+        #               str(len(self.queue)) + "\n" + \
+        #               "Average time customers spend\n" + \
+        #               "waiting to be served:              " + \
+        #               "%5.2f" % aveWaitTime
+        # return result
+        """Returns my results: my number, my total customers served,
+        my average wait time per customer, and customers left on my queue."""
         if self.customersServed != 0:
-            aveWaitTime = self.totalCustomerWaitTime /\
+            aveWaitTime = float(self.totalCustomerWaitTime) /\
                           self.customersServed
-            result += "Number of customers left in queue: " + \
-                      str(len(self.queue)) + "\n" + \
-                      "Average time customers spend\n" + \
-                      "waiting to be served:              " + \
-                      "%5.2f" % aveWaitTime
+        else:
+            aveWaitTime = 0.0
+        result = "%4d %8d %13.2f %8d" % (self.number,
+                                         self.customersServed,
+                                         aveWaitTime,
+                                         len(self.queue))
         return result
