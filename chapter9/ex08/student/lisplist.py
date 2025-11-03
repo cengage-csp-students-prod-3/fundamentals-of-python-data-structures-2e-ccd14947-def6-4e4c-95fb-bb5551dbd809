@@ -28,11 +28,11 @@ THE_EMPTY_LIST = None
 
 def equals(list1, list2):
     """Two lists are equal if they are both empty"""
-    if not list1 and list2: 
+    if not list1 and not list2: 
         return True
 
     """Two lists are not equal if one is empty"""
-    if not list1 or list2: 
+    if not list1 or not list2: 
         return False
 
     """Two list are equal if lengths of the lists are the same, 
