@@ -1,20 +1,12 @@
 
-Status: FAILED!
-Check: 1
-Test: 
-Reason: 
-Error : AssertionError - False is not true
-Timestamp: 2025-11-03 19:34:56.835519
-
-Status: FAILED!
+Status: PASSED!
 Check: 2
-Test: 
-Reason: 
-Error : AssertionError - False is not true
-Timestamp: 2025-11-03 19:34:56.835693
+Test: `equals()` functions as expected when lists are empty
+Reason: None
+Timestamp: 2025-11-03 19:36:53.624487
 
 Status: PASSED!
-Check: 3
-Test: `equals()` functions as expected when lists are not equal
+Check: 4
+Test: `equals()` functions as expected when one list is empty
 Reason: None
-Timestamp: 2025-11-03 19:34:56.835822
+Timestamp: 2025-11-03 19:36:53.624677
