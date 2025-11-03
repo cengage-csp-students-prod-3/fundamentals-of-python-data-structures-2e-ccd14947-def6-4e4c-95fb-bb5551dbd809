@@ -7,7 +7,34 @@ from arrays import Array
 from abstractcollection import AbstractCollection
 
 class ArrayQueue(AbstractCollection):
+    """An array-based queue implementation."""
 
+    # Simulates a circlular queue within an array
+
+    # Class variable
+    DEFAULT_CAPACITY = 10
+
+    # Constructor
+    def __init__(self, sourceCollection = None):
+        """Sets the initial state of self, which includes the
+        contents of sourceCollection, if it's present."""
+        self.front = self.rear = -1
+        self.items = Array(ArrayQueue.DEFAULT_CAPACITY)
+        AbstractCollection.__init__(self, sourceCollection)
+
+    # Accessor methods
+    def __iter__(self):
+        """Supports iteration over a view of self."""
+        cursor = self.front
+        while cursor != self.rear:
+            yield self.items[cursor]
+            if cursor == len(self.items) - 1:
+                cursor = 0
+            else:
+                cursor += 1
+        if cursor == self.rear and cursor != -1:
+            yield self.items[cursor]
+    
     def remove(self, item):
         """Removes the first occurrence of item from the queue and
         returns it. Raises KeyError if the item is not found."""
@@ -61,33 +88,6 @@ class ArrayQueue(AbstractCollection):
                 self.rear = len(self) - 1
 
         return item
-    """An array-based queue implementation."""
-
-    # Simulates a circlular queue within an array
-
-    # Class variable
-    DEFAULT_CAPACITY = 10
-
-    # Constructor
-    def __init__(self, sourceCollection = None):
-        """Sets the initial state of self, which includes the
-        contents of sourceCollection, if it's present."""
-        self.front = self.rear = -1
-        self.items = Array(ArrayQueue.DEFAULT_CAPACITY)
-        AbstractCollection.__init__(self, sourceCollection)
-
-    # Accessor methods
-    def __iter__(self):
-        """Supports iteration over a view of self."""
-        cursor = self.front
-        while cursor != self.rear:
-            yield self.items[cursor]
-            if cursor == len(self.items) - 1:
-                cursor = 0
-            else:
-                cursor += 1
-        if cursor == self.rear and cursor != -1:
-            yield self.items[cursor]
     
     def peek(self):
         """Returns the item at the front of the queue.

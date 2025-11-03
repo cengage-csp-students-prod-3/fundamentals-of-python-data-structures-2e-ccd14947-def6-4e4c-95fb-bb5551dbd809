@@ -44,6 +44,7 @@ def test(queueType):
     for count in range(5):
         q.add(count)
     print(q)
-    print("Removing 6: ", q.remove(6))
+    q.remove(6)
+    print("Removing 6: ", q)
 test(ArrayQueue)
 test(LinkedQueue)
