@@ -50,7 +50,7 @@ class ArrayQueue(AbstractCollection):
                 break
             idx = 0 if idx == len(self.items) - 1 else idx + 1
 
-        if not found:
+        if not found:#Raise an error if the item is not found!
             raise KeyError(item)
 
         # Shift elements left (toward front) to overwrite the removed item

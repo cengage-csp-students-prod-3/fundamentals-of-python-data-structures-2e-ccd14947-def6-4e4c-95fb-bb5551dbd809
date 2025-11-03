@@ -26,6 +26,11 @@ THE_EMPTY_LIST = None
 
 # Basic functions
 
+def insert(index, item, lyst):
+    """Returns a list in which the item is inserted 
+    at a given index position"""
+    return lyst(index(item))
+
 def isEmpty(lyst):
     """Returns True if lyst is empty or False otherwise."""
     return lyst is THE_EMPTY_LIST
