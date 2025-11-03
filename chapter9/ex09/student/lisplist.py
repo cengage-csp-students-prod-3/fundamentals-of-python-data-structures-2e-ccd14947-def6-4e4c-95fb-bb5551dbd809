@@ -90,6 +90,10 @@ def remove(index, lyst):
         return cons(first(lyst),
                     remove(index - 1, rest(lyst)))
 
+def removeAll(item, lyst):
+    if item ==  lyst([0]):
+        return remove
+
 def insert(index, item, lyst):
     """Returns a list with the item inserted at index.
     Precondition: 0 <= index < length(lyst)"""
