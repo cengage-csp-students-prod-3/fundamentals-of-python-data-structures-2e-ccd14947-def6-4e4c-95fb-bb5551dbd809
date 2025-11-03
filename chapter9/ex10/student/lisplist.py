@@ -9,10 +9,10 @@ class Node(object):
     """Represents a singly linked node."""
 
     def lispMap(self):
-        return self.lispMap
+        return self
     
     def lispFilter(self, items):
-        return items.lispFilter
+        return items
 
     def __init__(self, data, next = None):
         self.data = data
