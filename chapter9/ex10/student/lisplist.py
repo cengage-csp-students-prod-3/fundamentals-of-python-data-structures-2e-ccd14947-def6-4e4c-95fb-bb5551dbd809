@@ -15,8 +15,8 @@ class Node(object):
     
     #def lispFilter(self, items):
         #return items
-    def lispFilter(self, predicate, lst):
-        return [item for item in lst if predicate(item)]
+    def lispFilter(self, predicate, lyst):
+        return [item for item in lyst if predicate(item)]
 
     def __init__(self, data, next = None):
         self.data = data
