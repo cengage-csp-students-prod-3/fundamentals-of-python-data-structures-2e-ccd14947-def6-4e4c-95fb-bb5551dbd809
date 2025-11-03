@@ -26,6 +26,19 @@ THE_EMPTY_LIST = None
 
 # Basic functions
 
+def equals(list1, list2):
+    """Two lists are equal if they are both empty"""
+    if not list1 and list2 
+        return True
+
+    """Two lists are not equal if one is empty"""
+    if not list1 or list2 
+        return False
+
+    """Two list are equal if lengths of the lists are the same, 
+    their first items are equal and the rest of their items are equal."""
+    return list1[0] == list2[0] and equals(list1[1:], list2[1:]) 
+
 def isEmpty(lyst):
     """Returns True if lyst is empty or False otherwise."""
     return lyst is THE_EMPTY_LIST
