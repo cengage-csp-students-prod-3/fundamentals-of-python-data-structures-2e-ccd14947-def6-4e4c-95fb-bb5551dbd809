@@ -93,11 +93,20 @@ def remove(index, lyst):
 def insert(index, item, lyst):
     """Returns a list with the item inserted at index.
     Precondition: 0 <= index < length(lyst)"""
-    #Add from exercise 7
+    return lyst(index(item))
 
 def equals(lyst1, lyst2):
-    """Returns True if list1 equals lyst2."""
-    #Add from exercise 8
+    """Two lists are equal if they are both empty"""
+    if not lyst1 and not lyst2: 
+        return True
+
+    """Two lists are not equal if one is empty"""
+    if not lyst1 or not lyst2: 
+        return False
+
+    """Two list are equal if lengths of the lists are the same, 
+    their first items are equal and the rest of their items are equal."""
+    return lyst1[0] == lyst2[0] and equals(lyst1[1:], lyst2[1:]) 
 
 def main():
     """Create a list with 9..0 and print it."""
