@@ -3,10 +3,10 @@ Status: PASSED!
 Check: 2
 Test: `equals()` functions as expected when lists are empty
 Reason: None
-Timestamp: 2025-11-03 19:37:15.822800
+Timestamp: 2025-11-03 19:55:39.711478
 
 Status: PASSED!
 Check: 4
 Test: `equals()` functions as expected when one list is empty
 Reason: None
-Timestamp: 2025-11-03 19:37:15.823022
+Timestamp: 2025-11-03 19:55:39.711666
