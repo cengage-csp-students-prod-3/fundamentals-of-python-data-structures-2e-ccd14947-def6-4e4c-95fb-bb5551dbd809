@@ -8,15 +8,11 @@ Adds lispMap and lispFilter functions for Lisp lists.
 class Node(object):
     """Represents a singly linked node."""
 
-    #def lispMap(self):
-        #return self
-    def listMap(self, func, lyst):
-        return [func(item) for item in lyst]
+    def lispMap(self):
+        return self.lispMap
     
-    #def lispFilter(self, items):
-        #return items
-    def lispFilter(self, predicate, lyst):
-        return [item for item in lyst if predicate(item)]
+    def lispFilter(self, items):
+        return items
 
     def __init__(self, data, next = None):
         self.data = data
