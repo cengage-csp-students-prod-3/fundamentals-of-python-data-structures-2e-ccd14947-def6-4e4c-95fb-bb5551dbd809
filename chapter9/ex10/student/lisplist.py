@@ -8,15 +8,20 @@ Adds lispMap and lispFilter functions for Lisp lists.
 class Node(object):
     """Represents a singly linked node."""
 
-    def lispMap(self):
-        return self.lispMap
-    
-    def lispFilter(self, items):
-        return items
-
     def __init__(self, data, next = None):
         self.data = data
         self.next = next
+    
+    def listMap(self, func):
+        return list(map(func, self.lyst))
+    
+    def lispFilter(self, predicate, lyst):
+        if not lyst:  # Base case: if the list is empty, return an empty list
+            return []
+        elif predicate(lyst[0]):  # If the first element satisfies the predicate
+            return [lyst[0]] + lispFilter(predicate, lyst[1:])  # Include it and recurse
+        else:  # Otherwise, skip the first element and recurse
+            return lispFilter(predicate, lyst[1:])
 
     def __repr__(self):
         """Returns the string representation of a nonempty lisp list."""
@@ -94,6 +99,10 @@ def remove(index, lyst):
         return cons(first(lyst),
                     remove(index - 1, rest(lyst)))
 
+def removeAll(item, lyst):
+    if item ==  lyst([0]):
+        return remove
+
 def insert(index, item, lyst):
     """Returns a list with the item inserted at index.
     Precondition: 0 <= index < length(lyst)"""
@@ -110,11 +119,7 @@ def equals(lyst1, lyst2):
 
     """Two list are equal if lengths of the lists are the same, 
     their first items are equal and the rest of their items are equal."""
-    return lyst1[0] == lyst2[0] and equals(lyst1[1:], lyst2[1:])
-
-def removeAll(item, lyst):
-    if item ==  lyst([0]):
-        return remove
+    return lyst1[0] == lyst2[0] and equals(lyst1[1:], lyst2[1:]) 
 
 def main():
     """Create a list with 9..0 and print it."""
