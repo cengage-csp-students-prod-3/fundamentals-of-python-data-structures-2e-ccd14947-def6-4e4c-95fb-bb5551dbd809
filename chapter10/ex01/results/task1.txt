@@ -1,0 +1,35 @@
+
+Status: FAILED!
+Check: 1
+Test: 
+Reason: 
+Error : AttributeError - 'LinkedBST' object has no attribute 'value'
+Timestamp: 2025-11-10 23:02:51.195751
+
+Status: FAILED!
+Check: 2
+Test: 
+Reason: 
+Error : AttributeError - 'LinkedBST' object has no attribute 'value'
+Timestamp: 2025-11-10 23:02:51.195875
+
+Status: FAILED!
+Check: 3
+Test: 
+Reason: 
+Error : AttributeError - 'LinkedBST' object has no attribute 'value'
+Timestamp: 2025-11-10 23:02:51.195955
+
+Status: FAILED!
+Check: 4
+Test: 
+Reason: 
+Error : AttributeError - 'LinkedBST' object has no attribute 'value'
+Timestamp: 2025-11-10 23:02:51.196021
+
+Status: FAILED!
+Check: 5
+Test: 
+Reason: 
+Error : AttributeError - 'LinkedBST' object has no attribute 'value'
+Timestamp: 2025-11-10 23:02:51.196092
