@@ -48,11 +48,15 @@ class LinkedBST(AbstractCollection):
 
     def preorder(self):
         """Supports a preorder traversal on a view of self."""
-        
+        print(self.value, end=" ")
+        if self.left:
+            self.left.preorder()
+        if self.right:
+            self.right.preorder()
 
     def inorder(self):
         """Supports an inorder traversal on a view of self."""
-      lyst = list()
+      
     
     def postorder(self):
         """Supports a postorder traversal on a view of self."""
