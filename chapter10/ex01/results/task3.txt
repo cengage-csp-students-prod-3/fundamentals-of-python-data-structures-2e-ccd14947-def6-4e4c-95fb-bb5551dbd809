@@ -3,22 +3,22 @@ Status: PASSED!
 Check: 1
 Test: `postorder()` traverses nodes properly
 Reason: None
-Timestamp: 2025-11-10 23:33:22.228385
+Timestamp: 2025-11-10 23:35:09.407113
 
 Status: PASSED!
 Check: 2
 Test: `postorder()` does not traverse preorder
 Reason: None
-Timestamp: 2025-11-10 23:33:22.228540
+Timestamp: 2025-11-10 23:35:09.407229
 
 Status: PASSED!
 Check: 3
 Test: `postorder()` does not traverse in inorder
 Reason: None
-Timestamp: 2025-11-10 23:33:22.228649
+Timestamp: 2025-11-10 23:35:09.407304
 
 Status: PASSED!
 Check: 4
 Test: `postorder()` does not traverse in levelorder
 Reason: None
-Timestamp: 2025-11-10 23:33:22.228737
+Timestamp: 2025-11-10 23:35:09.407366

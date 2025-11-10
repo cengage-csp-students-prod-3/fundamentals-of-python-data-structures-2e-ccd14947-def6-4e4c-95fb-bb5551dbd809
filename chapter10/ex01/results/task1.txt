@@ -3,28 +3,28 @@ Status: PASSED!
 Check: 1
 Test: `preorder()` traverses nodes properly
 Reason: None
-Timestamp: 2025-11-10 23:33:23.994357
+Timestamp: 2025-11-10 23:35:09.235971
 
 Status: PASSED!
 Check: 2
 Test: `preorder()` does not traverse right to left
 Reason: None
-Timestamp: 2025-11-10 23:33:23.994498
+Timestamp: 2025-11-10 23:35:09.236083
 
 Status: PASSED!
 Check: 3
 Test: `preorder()` does not traverse using inorder
 Reason: None
-Timestamp: 2025-11-10 23:33:23.994574
+Timestamp: 2025-11-10 23:35:09.236163
 
 Status: PASSED!
 Check: 4
 Test: `preorder()` does not traverse in postorder
 Reason: None
-Timestamp: 2025-11-10 23:33:23.994643
+Timestamp: 2025-11-10 23:35:09.236229
 
 Status: PASSED!
 Check: 5
 Test: `preorder()` does not traverse in levelorder
 Reason: None
-Timestamp: 2025-11-10 23:33:23.994707
+Timestamp: 2025-11-10 23:35:09.236293

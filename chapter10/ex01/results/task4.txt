@@ -1,0 +1,24 @@
+
+Status: PASSED!
+Check: 1
+Test: `levelorder()` traverse nodes properly
+Reason: None
+Timestamp: 2025-11-10 23:35:09.489087
+
+Status: PASSED!
+Check: 2
+Test: `levelorder()` does not traverse in preorder
+Reason: None
+Timestamp: 2025-11-10 23:35:09.489209
+
+Status: PASSED!
+Check: 3
+Test: `levelorder()` does not traverse in postorder
+Reason: None
+Timestamp: 2025-11-10 23:35:09.489292
+
+Status: PASSED!
+Check: 4
+Test: `levelorder()` does not traverse in inorder
+Reason: None
+Timestamp: 2025-11-10 23:35:09.489363
