@@ -1,8 +1,8 @@
 """
 File: linkedbst.py
-Project 10.2
+Project 10.1
 
-Adds methods to returns the tree's height and test for balance.
+Completes the LinkedBST class.
 """
 
 from abstractcollection import AbstractCollection
@@ -13,8 +13,6 @@ from linkedqueue import LinkedQueue
 
 class LinkedBST(AbstractCollection):
     """An link-based binary search tree implementation."""
-	
-	# Reuse your solution from Programming Exercise 10.1 as your starter file
 
     def __init__(self, sourceCollection = None):
         """Sets the initial state of self, which includes the
@@ -48,6 +46,54 @@ class LinkedBST(AbstractCollection):
                     stack.push(node.right)
                 if node.left != None:
                     stack.push(node.left)
+
+    def preorder(self):
+        """Supports a preorder traversal on a view of self."""
+        lyst = list()
+        def recurse(node):
+            if node != None:
+                lyst.append(node.data)
+                recurse(node.left)
+                recurse(node.right)
+        recurse(self.root)
+        return iter(lyst)
+
+    def inorder(self):
+        """Supports an inorder traversal on a view of self."""
+        lyst = list()
+        def recurse(node):
+            if node != None:
+                recurse(node.left)
+                lyst.append(node.data)
+                recurse(node.right)
+        recurse(self.root)
+        return iter(lyst)
+
+    def postorder(self):
+        """Supports a postorder traversal on a view of self."""
+        lyst = list()
+        def recurse(node):
+            if node != None:
+                recurse(node.left)
+                recurse(node.right)
+                lyst.append(node.data)
+        recurse(self.root)
+        return iter(lyst)
+
+    def levelorder(self):
+        """Supports a levelorder traversal on a view of self."""
+        lyst = list()
+        queue = LinkedQueue()
+        if not self.isEmpty():
+            queue.add(self.root)
+        while not queue.isEmpty():
+            node = queue.pop()
+            lyst.append(node.data)
+            if node.left != None:
+                queue.add(node.left)
+            if node.right != None:
+                queue.add(node.right)
+        return iter(lyst)
 
     def __contains__(self, item):
         """Returns True if target is found or False otherwise."""
@@ -199,3 +245,24 @@ class LinkedBST(AbstractCollection):
             else:
                 probe = probe.right
         return None
+    
+    def height(self):
+        """Returns the height of the tree (the length of the longest path
+        from the root to a leaf node).
+        When len(t) < 2, t.height() == 0."""
+        def recurse(node):
+            if node == None:
+                return 0
+            else:
+                return 1 + max(recurse(node.left), recurse(node.right))
+        h = recurse(self.root)
+        if not self.isEmpty():
+            h -= 1
+        return h
+
+    def isBalanced(self):
+        """Returns True if the tree is balaned or False otherwise.
+        t is balanced iff t.height() < 2 * log2(len(t) + 1) - 1."""
+        return self.height() < 2 *log(len(self) + 1, 2) - 1
+
+
