@@ -8,20 +8,14 @@ Adds lispMap and lispFilter functions for Lisp lists.
 class Node(object):
     """Represents a singly linked node."""
 
+    # def listMap(self):
+
+    # def lispFilter(self):
+
+
     def __init__(self, data, next = None):
         self.data = data
         self.next = next
-    
-    def listMap(self, func):
-        return list(map(func, self.lyst))
-    
-    def lispFilter(self, predicate, lyst):
-        if not lyst:  # Base case: if the list is empty, return an empty list
-            return []
-        elif predicate(lyst[0]):  # If the first element satisfies the predicate
-            return [lyst[0]] + lispFilter(predicate, lyst[1:])  # Include it and recurse
-        else:  # Otherwise, skip the first element and recurse
-            return lispFilter(predicate, lyst[1:])
 
     def __repr__(self):
         """Returns the string representation of a nonempty lisp list."""
@@ -90,6 +84,23 @@ def buildRange(lower, upper):
     else:
         return cons(lower, buildRange(lower + 1, upper))
 
+def lispMap(fn, lyst):
+    """Applies fn to each element of lyst, returning a new Lisp list."""
+    if isEmpty(lyst):
+        return None
+    else:
+        return cons(fn(first(lyst)), lispMap(fn, rest(lyst)))
+
+def lispFilter(predicate, lyst):
+    """Returns a Lisp list of elements that satisfy predicate."""
+    if isEmpty(lyst):
+        return None
+    elif predicate(first(lyst)):
+        return cons(first(lyst), lispFilter(predicate, rest(lyst)))
+    else:
+        return lispFilter(predicate, rest(lyst))
+
+
 def remove(index, lyst):
     """Returns a list with the item at index removed.
     Precondition: 0 <= index < length(lyst)"""
@@ -121,7 +132,7 @@ def equals(lyst1, lyst2):
     their first items are equal and the rest of their items are equal."""
     return lyst1[0] == lyst2[0] and equals(lyst1[1:], lyst2[1:]) 
 
-def main():
+def main(): # type: ignore
     """Create a list with 9..0 and print it."""
     lyst = THE_EMPTY_LIST
     for i in range(10):
