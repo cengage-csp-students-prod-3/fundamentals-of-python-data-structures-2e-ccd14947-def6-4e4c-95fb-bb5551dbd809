@@ -48,22 +48,51 @@ class LinkedBST(AbstractCollection):
 
     def preorder(self):
         """Supports a preorder traversal on a view of self."""
-        print(self.value, end=" ")
-        if self.left:
-            self.left.preorder()
-        if self.right:
-            self.right.preorder()
+        lyst = list()
+        def recurse(node):
+            if node != None:
+                lyst.append(node.data)
+                recurse(node.left)
+                recurse(node.right)
+        recurse(self.root)
+        return iter(lyst)
 
     def inorder(self):
         """Supports an inorder traversal on a view of self."""
-      
-    
+        lyst = list()
+        def recurse(node):
+            if node != None:
+                recurse(node.left)
+                lyst.append(node.data)
+                recurse(node.right)
+        recurse(self.root)
+        return iter(lyst)
+
     def postorder(self):
         """Supports a postorder traversal on a view of self."""
-   
+        lyst = list()
+        def recurse(node):
+            if node != None:
+                recurse(node.left)
+                recurse(node.right)
+                lyst.append(node.data)
+        recurse(self.root)
+        return iter(lyst)
 
     def levelorder(self):
         """Supports a levelorder traversal on a view of self."""
+        lyst = list()
+        queue = LinkedQueue()
+        if not self.isEmpty():
+            queue.add(self.root)
+        while not queue.isEmpty():
+            node = queue.pop()
+            lyst.append(node.data)
+            if node.left != None:
+                queue.add(node.left)
+            if node.right != None:
+                queue.add(node.right)
+        return iter(lyst)
         
 
     def __contains__(self, item):
