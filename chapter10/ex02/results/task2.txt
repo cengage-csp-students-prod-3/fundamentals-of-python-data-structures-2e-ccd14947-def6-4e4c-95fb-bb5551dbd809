@@ -1,0 +1,12 @@
+
+Status: PASSED!
+Check: 1
+Test: `isBalanced()` returns the appropriate value for the height of the `LinkedBST`
+Reason: None
+Timestamp: 2025-11-10 23:53:08.101156
+
+Status: PASSED!
+Check: 2
+Test: `isBalanced()` returns the appropriate value for the height of the `LinkedBST`
+Reason: None
+Timestamp: 2025-11-10 23:53:08.101287
