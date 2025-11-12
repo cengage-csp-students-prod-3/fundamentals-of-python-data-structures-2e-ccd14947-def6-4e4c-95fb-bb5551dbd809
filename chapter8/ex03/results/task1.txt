@@ -3,11 +3,11 @@ Status: PASSED!
 Check: 1
 Test: `ArrayQueue.remove` removes item in queue
 Reason: None
-Timestamp: 2025-11-12 05:41:34.594920
+Timestamp: 2025-11-12 05:43:19.884813
 
 Status: FAILED!
 Check: 2
 Test: 
 Reason: 
 Error : KeyError - 8
-Timestamp: 2025-11-12 05:41:34.595074
+Timestamp: 2025-11-12 05:43:19.884958
