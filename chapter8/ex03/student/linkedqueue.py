@@ -36,6 +36,7 @@ class LinkedQueue(AbstractCollection):
             prev = cursor
             cursor = cursor.next
 
+        raise KeyError(item)
     """A link-based queue implementation."""
 
     # Constructor

@@ -25,7 +25,7 @@ def test(queueType):
     theClone.clear()
     print("Length of clone after clear:",  len(theClone))
     print("Pop 3 items:", end = " ")
-    for count in range(3): print(q.rem(), end = " ")
+    for count in range(3): print(q.pop(), end = " ")
     print("\nQueue: ", q)
     print("Adding 11 and 12:")
     for item in range(11, 13): q.add(item)
