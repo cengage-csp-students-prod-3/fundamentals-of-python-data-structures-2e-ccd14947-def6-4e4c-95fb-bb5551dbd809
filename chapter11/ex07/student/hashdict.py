@@ -44,7 +44,14 @@ class HashDict(AbstractDict):
     def __iter__(self):
         """Serves up the keys in the dictionary."""
         # Exercise
-        return iter(self.__dict__.keys())
+        items = []
+        keys = sorted(self._data.keys())     # Optional: sort numeric keys
+    
+        for k in keys:
+            v = self._data[k]
+            items.append(f"{k}:{v}")
+        
+        return "{ " + ", ".join(items) + " }"
 
     def __getitem__(self, key):
         """Precondition: the key is in the dictionary.
