@@ -1,7 +1,6 @@
 
-Status: FAILED!
+Status: PASSED!
 Check: 1
-Test: 
-Reason: 
-Error : AttributeError - 'HashSet' object has no attribute '_table'
-Timestamp: 2025-11-18 01:35:36.081202
+Test: `__iter__` functions as expected
+Reason: None
+Timestamp: 2025-11-18 02:13:15.603737
