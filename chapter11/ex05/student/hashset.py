@@ -49,8 +49,8 @@ class HashSet(AbstractSet, AbstractCollection):
         """Supports iteration over a view of self."""
         # Exercise
         for bucket in self._table:
-        for item in bucket:
-            yield item
+            for item in bucket:
+                yield item
         
 
     # Mutator methods
