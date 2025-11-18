@@ -4,4 +4,4 @@ Check: 1
 Test: 
 Reason: 
 Error : KeyError - 'Missing: capacity'
-Timestamp: 2025-11-18 19:40:14.733889
+Timestamp: 2025-11-18 20:04:17.643006
