@@ -61,8 +61,12 @@ class HashDict(AbstractDict):
     def clear(self):
         """Makes self become empty."""
         # Exercise
+        # self.array = Array(self.capacity)   # new empty bucket list
+        # self.size = 0
         self.array = Array(self.capacity)   # new empty bucket list
         self.size = 0
+        self.foundNode = self.priorNode = None
+        self.index = -1
 
     def __setitem__(self, key, value):
         """If the key is in the dictionary,
@@ -80,19 +84,23 @@ class HashDict(AbstractDict):
         if the key is in the dictionary,
         or returns the default value otherwise."""
         # Exercise
+        # Use __contains__ to find node and set pointers
         if key not in self:
             return defaultValue
 
+        # Save value before removing node
         removedValue = self.foundNode.data.value
 
+        # Remove from bucket
         if self.priorNode is None:
+            # Node is first in the chain
             self.array[self.index] = self.foundNode.next
         else:
+            # Bypass the found node
             self.priorNode.next = self.foundNode.next
 
         self.size -= 1
         return removedValue
 
-
-            
+                
 
