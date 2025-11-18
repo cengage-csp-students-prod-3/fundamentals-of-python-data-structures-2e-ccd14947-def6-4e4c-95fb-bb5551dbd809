@@ -1,7 +1,6 @@
 
-Status: FAILED!
+Status: PASSED!
 Check: 1
-Test: 
-Reason: 
-Error : TypeError - iter() returned non-iterator of type 'NoneType'
-Timestamp: 2025-11-18 02:11:41.946277
+Test: `__str__` functions as expected
+Reason: None
+Timestamp: 2025-11-18 02:37:43.763145
