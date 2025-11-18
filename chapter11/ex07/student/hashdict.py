@@ -47,7 +47,7 @@ class HashDict(AbstractDict):
         for bucket in self.array:
             node = bucket
             while node is not None:
-                yield node.key
+                yield node.data.key
                 node = node.next
 
     def __getitem__(self, key):
@@ -80,26 +80,18 @@ class HashDict(AbstractDict):
         if the key is in the dictionary,
         or returns the default value otherwise."""
         # Exercise
-        index = abs(hash(key)) % self.capacity
-        node = self.array[index]
-        previous = None
+        if key not in self:
+            return defaultValue
 
-        while node is not None:
-            if node.key == key:
-                # Unlink from chain
-                if previous is None:
-                    self.array[index] = node.next
-                else:
-                    previous.next = node.next
-                
-                self.size -= 1
-                return node.value  # return removed value
-            
-            previous = node
-            node = node.next
+        removedValue = self.foundNode.data.value
 
-        # Key not found
-        return default
+        if self.priorNode is None:
+            self.array[self.index] = self.foundNode.next
+        else:
+            self.priorNode.next = self.foundNode.next
+
+        self.size -= 1
+        return removedValue
 
 
             
