@@ -1,7 +1,6 @@
 
-Status: FAILED!
+Status: PASSED!
 Check: 1
-Test: 
-Reason: 
-Error : AttributeError - 'Node' object has no attribute 'key'
-Timestamp: 2025-11-18 20:30:04.453543
+Test: `__iter__` functions as expected
+Reason: None
+Timestamp: 2025-11-18 21:56:26.647735
