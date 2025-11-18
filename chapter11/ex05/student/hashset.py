@@ -43,10 +43,11 @@ class HashSet(AbstractSet, AbstractCollection):
     def __str__(self):
         """Returns the string representation of self."""
         # Exercise
-
+        return f"HashSet({{{', '.join(map(str, self.capacity))}}})"
     def __iter__(self):
         """Supports iteration over a view of self."""
         # Exercise
+        
 
     # Mutator methods
     def clear(self):
@@ -68,3 +69,4 @@ class HashSet(AbstractSet, AbstractCollection):
         Raises: KeyError if item in not in self.
         Postcondition: item is removed from self."""
         # Exercise 
+        self.capacity.remove(item)
