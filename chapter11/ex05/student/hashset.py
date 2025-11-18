@@ -76,4 +76,19 @@ class HashSet(AbstractSet, AbstractCollection):
         Raises: KeyError if item in not in self.
         Postcondition: item is removed from self."""
         # Exercise 
-        
+        index = hash(item) % self.capacity
+    current = self.array[index]
+    prev = None
+
+    while current is not None:
+        if current.data == item:
+            if prev is None:
+                # Removing head of bucket
+                self.array[index] = current.next
+            else:
+                prev.next = current.next
+            self.size -= 1
+            return
+        prev, current = current, current.next
+
+    raise KeyError(f"{item} not found in HashSet")
