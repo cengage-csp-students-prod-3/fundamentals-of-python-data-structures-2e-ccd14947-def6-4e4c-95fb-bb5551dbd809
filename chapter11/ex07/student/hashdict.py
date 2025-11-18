@@ -80,8 +80,27 @@ class HashDict(AbstractDict):
         if the key is in the dictionary,
         or returns the default value otherwise."""
         # Exercise
-        
+        index = abs(hash(key)) % self.capacity
+        node = self.array[index]
+        previous = None
+
+        while node is not None:
+            if node.key == key:
+                # Unlink from chain
+                if previous is None:
+                    self.array[index] = node.next
+                else:
+                    previous.next = node.next
+                
+                self.size -= 1
+                return node.value  # return removed value
+            
+            previous = node
+            node = node.next
+
+        # Key not found
+        return default
 
 
-        
+            
 
