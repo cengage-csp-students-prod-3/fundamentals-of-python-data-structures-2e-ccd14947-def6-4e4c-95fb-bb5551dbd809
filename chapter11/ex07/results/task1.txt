@@ -3,5 +3,5 @@ Status: FAILED!
 Check: 1
 Test: 
 Reason: 
-Error : AttributeError - 'HashDict' object has no attribute '_data'
-Timestamp: 2025-11-18 20:07:47.248556
+Error : AttributeError - 'Node' object has no attribute 'key'
+Timestamp: 2025-11-18 20:12:54.029850
