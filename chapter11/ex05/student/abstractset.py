@@ -39,4 +39,9 @@ class AbstractSet(object):
         """Returns True if self equals other,
         or False otherwise."""
         # Exercise
-
+        if self is other:
+            return True
+        if not isinstance(other, AbstractSet):
+            return False
+        # Two sets are equal if each is a subset of the other
+        return self.issubset(other) and other.issubset(self)
