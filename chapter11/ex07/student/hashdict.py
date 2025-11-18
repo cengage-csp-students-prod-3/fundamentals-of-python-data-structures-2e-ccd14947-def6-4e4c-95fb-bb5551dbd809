@@ -44,13 +44,9 @@ class HashDict(AbstractDict):
     def __iter__(self):
         """Serves up the keys in the dictionary."""
         # Exercise
-        entries = []
-        for bucket in self.array:
-            node = bucket
-            while node is not None:
-                entries.append(f"{node.key}:{node.value}")
-                node = node.next
-        return "{" + ", ".join(entries) + "}"
+        for bucket in self:
+            for key, _ in bucket:
+                yield key
       
 
     def __getitem__(self, key):
@@ -83,24 +79,5 @@ class HashDict(AbstractDict):
         if the key is in the dictionary,
         or returns the default value otherwise."""
         # Exercise
-        index = abs(hash(key)) % self.capacity
-        node = self.array[index]
-        previous = None
-
-        while node is not None:
-            if node.key == key:
-                # Remove node from chain
-                if previous is None:
-                    self.array[index] = node.next
-                else:
-                    previous.next = node.next
-
-                self.size -= 1
-                return node.value
-
-            previous = node
-            node = node.next
-
-        # Key not found
-        return default
+        
 
