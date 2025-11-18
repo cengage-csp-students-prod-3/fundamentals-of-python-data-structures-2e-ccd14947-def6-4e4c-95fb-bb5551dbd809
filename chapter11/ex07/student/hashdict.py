@@ -44,14 +44,14 @@ class HashDict(AbstractDict):
     def __iter__(self):
         """Serves up the keys in the dictionary."""
         # Exercise
-        items = []
-        keys = sorted(self._data.keys())     # Optional: sort numeric keys
-    
-        for k in keys:
-            v = self._data[k]
-            items.append(f"{k}:{v}")
-        
-        return "{ " + ", ".join(items) + " }"
+        entries = []
+        for bucket in self.array:
+            node = bucket
+            while node is not None:
+                entries.append(f"{node.key}:{node.value}")
+                node = node.next
+        return "{" + ", ".join(entries) + "}"
+      
 
     def __getitem__(self, key):
         """Precondition: the key is in the dictionary.
@@ -64,6 +64,8 @@ class HashDict(AbstractDict):
     def clear(self):
         """Makes self become empty."""
         # Exercise
+        self.array = Array(self.capacity)   # new empty bucket list
+        self.size = 0
 
     def __setitem__(self, key, value):
         """If the key is in the dictionary,
@@ -81,3 +83,24 @@ class HashDict(AbstractDict):
         if the key is in the dictionary,
         or returns the default value otherwise."""
         # Exercise
+        index = abs(hash(key)) % self.capacity
+        node = self.array[index]
+        previous = None
+
+        while node is not None:
+            if node.key == key:
+                # Remove node from chain
+                if previous is None:
+                    self.array[index] = node.next
+                else:
+                    previous.next = node.next
+
+                self.size -= 1
+                return node.value
+
+            previous = node
+            node = node.next
+
+        # Key not found
+        return default
+
