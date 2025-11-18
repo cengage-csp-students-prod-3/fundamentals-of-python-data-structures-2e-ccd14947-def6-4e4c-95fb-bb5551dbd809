@@ -44,11 +44,11 @@ class HashDict(AbstractDict):
     def __iter__(self):
         """Serves up the keys in the dictionary."""
         # Exercise
-        for bucket in self.array:
-            node = bucket
-            while node is not None:
-                yield node.data.key
-                node = node.next
+        for node in self.array:
+            current = node
+            while current is not None:
+                yield current.data.key
+                current = current.next
 
     def __getitem__(self, key):
         """Precondition: the key is in the dictionary.
@@ -63,10 +63,8 @@ class HashDict(AbstractDict):
         # Exercise
         # self.array = Array(self.capacity)   # new empty bucket list
         # self.size = 0
-        self.array = Array(self.capacity)   # new empty bucket list
+        self.array = Array(self.capacity)
         self.size = 0
-        self.foundNode = self.priorNode = None
-        self.index = -1
 
     def __setitem__(self, key, value):
         """If the key is in the dictionary,
@@ -84,23 +82,19 @@ class HashDict(AbstractDict):
         if the key is in the dictionary,
         or returns the default value otherwise."""
         # Exercise
-        # Use __contains__ to find node and set pointers
         if key not in self:
             return defaultValue
 
-        # Save value before removing node
-        removedValue = self.foundNode.data.value
+        # Value to return
+        value = self.foundNode.data.value
 
-        # Remove from bucket
+        # Removing head of chain
         if self.priorNode is None:
-            # Node is first in the chain
             self.array[self.index] = self.foundNode.next
         else:
-            # Bypass the found node
             self.priorNode.next = self.foundNode.next
 
         self.size -= 1
-        return removedValue
-
+        return value
                 
 
