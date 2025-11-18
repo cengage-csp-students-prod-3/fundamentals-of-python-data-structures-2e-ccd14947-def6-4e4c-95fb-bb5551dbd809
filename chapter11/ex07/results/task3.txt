@@ -1,7 +1,6 @@
 
-Status: FAILED!
+Status: PASSED!
 Check: 1
-Test: 
-Reason: 
-Error : AttributeError - 'Node' object has no attribute 'key'
-Timestamp: 2025-11-18 20:12:51.618412
+Test: `pop()` functions as expected
+Reason: None
+Timestamp: 2025-11-18 21:57:01.393621
