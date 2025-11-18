@@ -44,7 +44,7 @@ class HashDict(AbstractDict):
     def __iter__(self):
         """Serves up the keys in the dictionary."""
         # Exercise
-        return iter(self.data.keys())
+        return iter(self.__dict__.keys())
 
     def __getitem__(self, key):
         """Precondition: the key is in the dictionary.
