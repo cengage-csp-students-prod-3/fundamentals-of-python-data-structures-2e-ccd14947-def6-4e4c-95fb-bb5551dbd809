@@ -3,5 +3,5 @@ Status: FAILED!
 Check: 1
 Test: 
 Reason: 
-Error : KeyError - 'Missing: capacity'
-Timestamp: 2025-11-18 20:04:17.643006
+Error : AttributeError - 'HashDict' object has no attribute '_data'
+Timestamp: 2025-11-18 20:07:47.248556
