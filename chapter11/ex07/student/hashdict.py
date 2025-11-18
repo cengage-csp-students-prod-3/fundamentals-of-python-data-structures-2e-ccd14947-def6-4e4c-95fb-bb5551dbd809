@@ -44,10 +44,11 @@ class HashDict(AbstractDict):
     def __iter__(self):
         """Serves up the keys in the dictionary."""
         # Exercise
-        for bucket in self:
-            for key, _ in bucket:
-                yield key
-      
+        for bucket in self.array:
+            node = bucket
+            while node is not None:
+                yield node.key
+                node = node.next
 
     def __getitem__(self, key):
         """Precondition: the key is in the dictionary.
@@ -79,5 +80,8 @@ class HashDict(AbstractDict):
         if the key is in the dictionary,
         or returns the default value otherwise."""
         # Exercise
+        
+
+
         
 
