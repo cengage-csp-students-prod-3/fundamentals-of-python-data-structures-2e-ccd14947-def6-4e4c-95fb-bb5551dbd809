@@ -1,7 +1,3 @@
 {
-  "language": "python",
-  "gui": false,
-  "shell": false,
-  "restrictedFiles": [],
-  "isFirstTimeSetup": false
+  "language": "python"
 }
