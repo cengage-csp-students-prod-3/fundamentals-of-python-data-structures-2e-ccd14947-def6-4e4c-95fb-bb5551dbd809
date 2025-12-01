@@ -3,4 +3,4 @@ Status: PASSED!
 Check: 1
 Test: `getVertex()` raises `AttributeError` if vertex does not exist
 Reason: None
-Timestamp: 2025-12-01 21:29:27.674572
+Timestamp: 2025-12-01 22:01:33.708961
