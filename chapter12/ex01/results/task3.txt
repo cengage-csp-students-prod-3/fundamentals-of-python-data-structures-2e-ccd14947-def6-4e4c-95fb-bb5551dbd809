@@ -1,7 +1,6 @@
 
-Status: FAILED!
+Status: PASSED!
 Check: 1
-Test: 
-Reason: 
-Error : AttributeError - Vertex 'A' already exists
-Timestamp: 2025-12-01 21:00:52.681901
+Test: `getVertex()` raises `AttributeError` if vertex does not exist
+Reason: None
+Timestamp: 2025-12-01 21:29:27.674572
