@@ -3,4 +3,4 @@ Status: PASSED!
 Check: 1
 Test: `addVertex()` raises `AttributeError` if vertex is already in the graph
 Reason: None
-Timestamp: 2025-12-01 22:01:50.551453
+Timestamp: 2025-12-01 22:06:56.415984
