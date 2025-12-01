@@ -203,6 +203,7 @@ class LinkedDirectedGraph(AbstractCollection):
     
     def addVertex(self, label):
         """Adds a vertex with the given label to the graph."""
+        #added the precondition and raise AttributeError
         if self.containsVertex(label):
             raise AttributeError("Label " + str(label) + " already in graph.""")
         self.vertices[label] = LinkedVertex(label)
@@ -212,6 +213,7 @@ class LinkedDirectedGraph(AbstractCollection):
         return label in self.vertices
     
     def getVertex(self, label):
+        #added the precondition and raise AttributeError
         if not self.containsVertex(label):
             raise AttributeError("Label " + str(label) + " not in graph.""")
         return self.vertices[label]
@@ -240,6 +242,7 @@ class LinkedDirectedGraph(AbstractCollection):
         """Connects the vertices with an edge with the given weight."""
         fromVertex = self.getVertex(fromLabel)
         toVertex   = self.getVertex(toLabel)
+        #added the precondition and raise AttributeError
         if self.getEdge(fromLabel, toLabel):
             raise AttributeError("An edge already connects " + \
                                  str(fromLabel) + " and " + \
