@@ -219,7 +219,10 @@ class LinkedDirectedGraph(AbstractCollection):
         return label in self.vertices
     
     def getVertex(self, label):
+        if label not in self.vertices:
+            raise AttributeError
         return self.vertices[label]
+        
     
     def removeVertex(self,  label):
         """Returns True if the vertex was removed, or False otherwise."""
