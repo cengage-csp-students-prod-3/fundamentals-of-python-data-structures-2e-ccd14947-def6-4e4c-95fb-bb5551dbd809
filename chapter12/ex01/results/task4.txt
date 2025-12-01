@@ -1,7 +1,6 @@
 
-Status: FAILED!
+Status: PASSED!
 Check: 1
-Test: 
-Reason: 
-Error : AttributeError - Vertex 'A' already exists
-Timestamp: 2025-12-01 20:46:50.179545
+Test: `getEdge()` raises `AttributeError` if edge does not exist
+Reason: None
+Timestamp: 2025-12-01 21:29:39.841641
