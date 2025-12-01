@@ -210,6 +210,8 @@ class LinkedDirectedGraph(AbstractCollection):
         """Adds a vertex with the given label to the graph."""
         self.vertices[label] = LinkedVertex(label)
         self.size += 1
+        if label in self.vertices:
+            raise AttributeError("A vertex with label already exists in the graph.")
         
     def containsVertex (self, label):
         return label in self.vertices
