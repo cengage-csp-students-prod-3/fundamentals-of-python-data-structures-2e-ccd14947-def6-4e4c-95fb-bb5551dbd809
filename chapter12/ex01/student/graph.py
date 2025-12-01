@@ -256,9 +256,12 @@ class LinkedDirectedGraph(AbstractCollection):
     def getEdge(self, fromLabel, toLabel):
         """Returns the edge connecting the two vertices, or None if
         no edge exists."""
+        if fromLabel and toLabel not in self.vertices:
+            raise AttributeError
         fromVertex = self.getVertex(fromLabel)
         toVertex   = self.getVertex(toLabel)
         return fromVertex.getEdgeTo(toVertex)
+    
     
     def removeEdge(self, fromLabel, toLabel): 
         """Returns True if the edge was removed, or False otherwise."""
