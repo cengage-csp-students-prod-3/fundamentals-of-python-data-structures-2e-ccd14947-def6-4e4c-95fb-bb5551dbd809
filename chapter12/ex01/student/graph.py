@@ -10,10 +10,10 @@ adjacency list, adding preconditions and raising exceptions where relevant.
 from abstractcollection import AbstractCollection
 
 class LinkedEdge(object):
-
+    
     # An edge has a source vertex, a destination vertex,
     # a weight, and a mark attribute.
-    
+
     def __init__(self, fromVertex, toVertex, weight = None):         
         self.vertex1 = fromVertex
         self.vertex2 = toVertex
@@ -33,7 +33,7 @@ class LinkedEdge(object):
         return self.vertex1 == other.vertex1 and \
                self.vertex2 == other.vertex2
     
-    def getOtherVertex(self, thisVertex):
+    def getOtherVertex(self,  thisVertex):
         """Returns the vertex opposite thisVertex."""
         if thisVertex == None or thisVertex == self.vertex2:
             return self.vertex1
@@ -48,7 +48,7 @@ class LinkedEdge(object):
         """Returns the edge's weight."""
         return self.weight
     
-    def isMarked(self):
+    def isMarked(self): 
         """Returns True if the edge is marked
         or False otherwise."""
         return self.mark
@@ -79,13 +79,13 @@ class LinkedVertex(object):
 
     def clearMark(self):
         """Clears the mark on the vertex."""
-        self.mark = False
+        self.mark = False;
     
-    def getLabel(self):
+    def getLabel(self): 
         """Returns the label of the vertex."""
         return self.label
     
-    def isMarked(self):
+    def isMarked(self): 
         """Returns True if the vertex is marked
         or False otherwise."""
         return self.mark
@@ -191,7 +191,7 @@ class LinkedDirectedGraph(AbstractCollection):
     
     def __str__(self):
         """Returns the string representation of the graph."""
-        result = str(self.sizeVertices()) + " Vertices: "
+        result = str(len(self)) + " Vertices: "
         for vertex in self.vertices:
             result += " " + str(vertex)
         result += "\n";
@@ -207,22 +207,24 @@ class LinkedDirectedGraph(AbstractCollection):
     # Vertex related methods
     
     def addVertex(self, label):
-        """Adds a vertex with the given label to the graph."""
-        self.vertices[label] = LinkedVertex(label)
-        self.size += 1
+        """Precondition: a vertex with label must not
+        already be in the graph.
+        Raises: AttibuteError if a vertex with label
+        is already in the graph."""
         if self.containsVertex(label):
             raise AttributeError("Label " + str(label) + " already in graph.""")
-
- 
+        self.vertices[label] = LinkedVertex(label)
+        self.size += 1
         
     def containsVertex (self, label):
         return label in self.vertices
     
     def getVertex(self, label):
+        """Precondition: a vertex with label must already be in the graph.
+        Raises: AttibuteError if a vertex with label is not already in the graph."""
         if not self.containsVertex(label):
             raise AttributeError("Label " + str(label) + " not in graph.""")
         return self.vertices[label]
-        
     
     def removeVertex(self,  label):
         """Returns True if the vertex was removed, or False otherwise."""
@@ -238,15 +240,20 @@ class LinkedDirectedGraph(AbstractCollection):
 
         # Examine all edges from the removed vertex to others
         for edge in removedVertex.incidentEdges():
-            self.edgeCount -= 1           
+            self.edgeCount -= 1
         self.size -= 1
         return True
     
     # Methods related to edges
 
     def addEdge(self, fromLabel, toLabel, weight):
-        """Connects the vertices with an edge with the given weight."""
-        fromVertex = self.getVertex(fromLabel)
+        """Connects the vertices with an edge with the given weight.
+        Preconditions: vertices with fromLabel and toLabel must
+        already be in the graph.
+        The vertices must not already be connected by an edge.
+        Raises: AttibuteError if the vertices
+        are not already in the graph or they are already connected."""
+        fromVertex = self.getVertex(fromLabel)     
         toVertex   = self.getVertex(toLabel)
         if self.getEdge(fromLabel, toLabel):
             raise AttributeError("An edge already connects " + \
@@ -262,14 +269,21 @@ class LinkedDirectedGraph(AbstractCollection):
     
     def getEdge(self, fromLabel, toLabel):
         """Returns the edge connecting the two vertices, or None if
-        no edge exists."""
-        fromVertex = self.getVertex(fromLabel)
-        toVertex   = self.getVertex(toLabel)
+        no edge exists.
+        Precondition: vertices with fromLabel and toLabel must
+        already be in the graph.
+        Raises: AttibuteError if the vertices
+        are not already in the graph."""
+        fromVertex = self.getVertex(fromLabel)     
+        toVertex   = self.getVertex(toLabel)     
         return fromVertex.getEdgeTo(toVertex)
     
-    
-    def removeEdge(self, fromLabel, toLabel): 
-        """Returns True if the edge was removed, or False otherwise."""
+    def removeEdge (self, fromLabel, toLabel): 
+        """Returns True if the edge was removed, or False otherwise.
+        Precondition: vertices with fromLabel and toLabel must
+        already be in the graph.
+        Raises: AttibuteError if the vertices
+        are not already in the graph."""
         fromVertex = self.getVertex(fromLabel)     
         toVertex   = self.getVertex(toLabel)     
         edgeRemovedFlg = fromVertex.removeEdgeTo(toVertex)
@@ -281,7 +295,7 @@ class LinkedDirectedGraph(AbstractCollection):
     
     def __iter__(self):
         """Supports iteration over a view of self (the vertices)."""
-        return self.vertices()
+        return self.getVertices()
 
     def edges(self):
         """Supports iteration over the edges in the graph."""
@@ -296,11 +310,15 @@ class LinkedDirectedGraph(AbstractCollection):
 
     def incidentEdges(self, label):
         """Supports iteration over the incident edges of the
-        given verrtex."""
+        given verrtex.
+        Precondition: a vertex with label must already be in the graph.
+        Raises: AttibuteError if a vertex with label is not already in the graph."""
         return self.getVertex(label).incidentEdges()
     
     def neighboringVertices(self, label):
         """Supports iteration over the neighboring vertices of the
-        given verrtex."""
+        given verrtex.
+        Precondition: a vertex with label must already be in the graph.
+        Raises: AttibuteError if a vertex with label is not already in the graph."""
         return self.getVertex(label).neighboringVertices()
     
