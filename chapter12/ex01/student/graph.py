@@ -219,8 +219,8 @@ class LinkedDirectedGraph(AbstractCollection):
         return label in self.vertices
     
     def getVertex(self, label):
-        if label not in self.vertices:
-            raise AttributeError
+        if not self.containsVertex(label):
+            raise AttributeError("Label " + str(label) + " not in graph.""")
         return self.vertices[label]
         
     
@@ -248,6 +248,10 @@ class LinkedDirectedGraph(AbstractCollection):
         """Connects the vertices with an edge with the given weight."""
         fromVertex = self.getVertex(fromLabel)
         toVertex   = self.getVertex(toLabel)
+        if self.getEdge(fromLabel, toLabel):
+            raise AttributeError("An edge already connects " + \
+                                 str(fromLabel) + " and " + \
+                                 str(toLabel))
         fromVertex.addEdgeTo(toVertex, weight)
         self.edgeCount += 1
     
@@ -259,8 +263,6 @@ class LinkedDirectedGraph(AbstractCollection):
     def getEdge(self, fromLabel, toLabel):
         """Returns the edge connecting the two vertices, or None if
         no edge exists."""
-        if fromLabel and toLabel not in self.vertices:
-            raise AttributeError
         fromVertex = self.getVertex(fromLabel)
         toVertex   = self.getVertex(toLabel)
         return fromVertex.getEdgeTo(toVertex)
