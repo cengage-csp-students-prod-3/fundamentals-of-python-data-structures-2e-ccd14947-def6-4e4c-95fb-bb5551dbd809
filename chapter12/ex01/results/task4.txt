@@ -1,0 +1,7 @@
+
+Status: FAILED!
+Check: 1
+Test: 
+Reason: 
+Error : AttributeError - Vertex 'A' already exists
+Timestamp: 2025-12-01 20:46:50.179545
