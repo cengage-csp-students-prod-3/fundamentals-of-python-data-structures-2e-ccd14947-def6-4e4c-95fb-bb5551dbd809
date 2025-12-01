@@ -3,5 +3,5 @@ Status: FAILED!
 Check: 1
 Test: 
 Reason: 
-Error : AssertionError - AttributeError not raised
-Timestamp: 2025-12-01 20:06:13.421732
+Error : AttributeError - A vertex with label already exists in the graph.
+Timestamp: 2025-12-01 20:15:38.697041
