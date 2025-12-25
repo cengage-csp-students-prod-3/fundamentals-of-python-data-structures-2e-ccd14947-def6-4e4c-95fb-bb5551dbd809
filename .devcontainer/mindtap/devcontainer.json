@@ -1,6 +1,6 @@
 {
   "name": "MindTap",
-  "image": "mcr.microsoft.com/devcontainers/universal:4-noble",
+  "image": "mcr.microsoft.com/devcontainers/universal:latest",
   "customizations": {
     "vscode": {
       "extensions": [
